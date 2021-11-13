@@ -1,7 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Footer.css";
 
-function Footer()
+function Footer() {
 
-export default Footer
+    return (
+        <div class="footer">
+            <a href="http://localhost:3000/">Built by Baby Hackuccinos ©2021</a>
+        </div>
+    );
+}
+
+export default Footer;

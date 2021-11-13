@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import "./CodersPage.css"
 
 
-function CodersPage()
+function CodersPage() {}
+
 
 export default CodersPage;
