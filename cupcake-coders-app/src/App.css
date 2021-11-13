@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* * {
+  border: 1px solid fuchsia;
+} */
+
+#dares-list {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 40px;
+  row-gap: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100%;
+  max-width: 100%;
+  margin:0;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dare {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: white;
+  text-align: center;
+  width: 85%;
+  border-radius: .45rem;
+  margin-bottom: 50px;
+}
+
+.dare-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.dare h2 {
+  text-transform: uppercase;
+  text-align: left;
+  color: black;
+}
+
+.dare-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #38F3FF;
+  color: darkslategrey;
+  text-align: center;
+  align-items: center;
+}
+
+.dare-page button {
+  width: 30%;
+}
+
+.dare-page img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: .45rem;
+  box-shadow: 0 11px 32px rgb(31 119 166 / 40%);
+}
+
+.dare-page a {
+  padding: 20px;
+  font-family: spartan, sans-serif;
+  font-weight: 600;
+  color: black;
+}
+
+h1 {
+  color: black;
+  font-family: spartan, sans-serif;
+}
+
+h2 {
   color: white;
+  font-size: 20px;
+  font-family: Spartan, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  color: darkslategrey;
+  font-size: 16px;
+  text-align: center;
+  font-family: spartan, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  font-size: 1rem;
+  font-family: spartan, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 5px 10px 5px;
+  background-color: darkslategrey;
+  color: white;  
+  border-radius: .45rem;
+  margin-top: 30px;
+}
+
+.dare p {
+  padding: 5px 30px 5px 30px;
+  font-family: spartan, sans-serif;
+}
+
+.dare li {
+  text-align: left;
+  font-family: spartan, sans-serif;
 }

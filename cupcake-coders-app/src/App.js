@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ".App.css";
+import Nav from "./components/Nav/Nav";
+import HomePage from "./pages/HomePage/Homepage";
+import CodersPage from "./pages/CodersPage/CodersPage";
+import ImpactPageCareer from "./pages/ImpactPageCareer/ImpactPageCareer";
+import ImpactPageEnrolment from "./pages/ImpactPageEnrolment/ImpactPageEnrolment";
+import ImpactPageHire from "./pages/ImpactPageHire/ImpactPageHire";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
+import Footer from "./components/Footer/Footer";
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Nav />
+
+        <Switch>
+          <Route path="/coders/:id">
+            <CodersPage />
+          </Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
+          <Route path="/careers">
+            <ImpactPageCareer />
+          </Route>
+          <Route path="/enrollments">
+            <ImpactPageEnrolment />
+          </Route>
+          <Route path="/hires">
+            <ImpactPageHire />
+          </Route>
+          <Route path="/register">
+            <RegistrationPage />
+          </Route>
+          <Route path="/login">
+            <LoginPage />
+          </Route>
+        </Switch>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
-export default App;
+export default App
