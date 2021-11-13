@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ".App.css";
 import Nav from "./components/Nav/Nav";
 import HomePage from "./pages/HomePage/Homepage";
@@ -18,7 +18,7 @@ function App () {
         <Header />
         <Nav />
 
-        <Switch>
+        <Routes>
           <Route path="/coders/:id">
             <CodersPage />
           </Route>
@@ -40,7 +40,7 @@ function App () {
           <Route path="/login">
             <LoginPage />
           </Route>
-        </Switch>
+        </Routes>
 
         <Footer />
       </div>
