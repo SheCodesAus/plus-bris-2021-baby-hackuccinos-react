@@ -4,7 +4,8 @@ import "./ImpactPageCareer.css"
 
 
 function ImpactPageCareer()  {
-    
+    return <h1>This is the Impact Page Career.</h1>
+
 }
 
 
