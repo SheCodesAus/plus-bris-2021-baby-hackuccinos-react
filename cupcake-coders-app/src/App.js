@@ -16,17 +16,17 @@ function App () {
   return (
     <Router>
       <div>
-        {/* <Header /> */}
+        <Header />
         <Nav />
 
         <Routes>
-          <Route path="/coders/:id">
-            <CodersPage />
-          </Route>
-          <Route path="/">
+          <Route exact path="/coders/:id" element={<CodersPage/>}/>
+          {/* <Route path="/">
             <HomePage />
-          </Route>
-          <Route path="/careers">
+          </Route> */}
+
+          <Route exact path='/' element={<HomePage/>}/>
+          {/* <Route path="/careers">
             <ImpactPageCareer />
           </Route>
           <Route path="/enrollments">
@@ -40,13 +40,13 @@ function App () {
           </Route>
           <Route path="/login">
             <LoginPage />
-          </Route>
+          </Route> */}
         </Routes>
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );
 }
 
-export default App
+export default App;
