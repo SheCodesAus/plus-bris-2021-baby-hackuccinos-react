@@ -1,0 +1,16 @@
+.header {
+    background-color: #8246AF;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header img {
+    height: 200px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}

@@ -1,15 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import Nav from "../Nav/Nav";
 
 function Header() {
     
     return (
         <div class="header">
-            <a href="https://fundare.herokuapp.com/">
-                <img src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/SheCodes-01.png"/>
-            </a>
-            <h3>Cupcake Coders</h3>
+            <div class="logo">
+                <a href="/">
+                    <img src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/She-Codes-logo-white.png"/>
+                </a>
+            </div>
+            <Nav />
         </div>
     );
 }

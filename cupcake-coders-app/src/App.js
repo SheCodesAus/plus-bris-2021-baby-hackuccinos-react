@@ -15,9 +15,7 @@ import Header from "./components/Header/Header";
 function App () {
   return (
     <Router>
-      <div>
         <Header />
-        <Nav />
 
         <Routes>
           <Route exact path="/coders/:id" element={<CodersPage/>}/>
@@ -44,7 +42,6 @@ function App () {
         </Routes>
 
         {/* <Footer /> */}
-      </div>
     </Router>
   );
 }
