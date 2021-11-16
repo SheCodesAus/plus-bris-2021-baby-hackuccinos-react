@@ -16,7 +16,7 @@ function App () {
   return (
     <Router>
       <div>
-        <Header />
+        {/* <Header /> */}
         <Nav />
 
         <Routes>
