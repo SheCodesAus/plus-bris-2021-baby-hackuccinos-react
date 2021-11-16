@@ -3,7 +3,9 @@ import { Link } from "react-router-dom"
 import "./ImpactPageCareer.css"
 
 
-function ImpactPageCareer()
+function ImpactPageCareer()  {
+    
+}
 
 
 export default ImpactPageCareer;

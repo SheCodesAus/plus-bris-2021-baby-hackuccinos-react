@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom"
 import "./Nav.css"
 
-function Nav()
+function Nav() {}
 
 
 export default Nav;
