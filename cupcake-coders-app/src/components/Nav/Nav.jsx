@@ -1,7 +1,7 @@
-import React, { useEffect, useState }  from "react"
+import React, { useEffect, useState }  from "react";
 import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom"
-import "./Nav.css"
+import { Link } from "react-router-dom";
+import "./Nav.css";
 
 function Nav() {
     return (
