@@ -22,17 +22,16 @@ form input {
     font-family: Raleway, sans-serif;
 }
 
-h1 {
+/* h1 {
     font-family: Raleway,sans-serif;
     font-weight: 600;
     display: flex;
     align-items: center;
     color: black;
     text-align: center;
-}
+} */
 
 .logo {
-    width: 200px;
     display: flex;
     justify-content: center;
 }

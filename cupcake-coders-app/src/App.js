@@ -24,6 +24,7 @@ function App () {
           </Route> */}
 
           <Route exact path='/' element={<HomePage/>}/>
+          <Route exact path='/login' element={<LoginPage/>}/>
           {/* <Route path="/careers">
             <ImpactPageCareer />
           </Route>

@@ -4,6 +4,7 @@ import CoderSection from "../../components/CoderSection/CoderSection";
 import Header from "../../components/Header/Header";
 import ImpactCounter from "../../components/ImpactCounter/ImpactCounter";
 import "./HomePage.css";
+import Footer from "../../components/Footer/Footer";
 
 function HomePage()  {
     return (
@@ -29,8 +30,8 @@ function HomePage()  {
                     to take on a tech role and begin their new careers.  
                     If you are interested in getting involved with She Codes please contact us 
                 </p>
-                
             </div>
+            <Footer />
         </div>
     )
 }
