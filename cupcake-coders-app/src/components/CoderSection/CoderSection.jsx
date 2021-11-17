@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CoderCard from "../CoderCard/CoderCard";
 import "./CoderSection.css";
 
 function CoderSection () {
@@ -15,6 +16,7 @@ function CoderSection () {
                 feats!
             </h3>
         </div>
+        <CoderCard />
         <div id="coder-section-button">
             <button>Meet the whole gang</button>
         </div>

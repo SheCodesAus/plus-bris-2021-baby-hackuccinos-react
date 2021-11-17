@@ -9,6 +9,9 @@ form {
 
 form label {
     padding: 20px 0px 20px 0px;
+    color: white;
+    font-size: large;
+    font-weight: bold;
 }
 
 .label {
@@ -38,16 +41,23 @@ form input {
 
 .login-page {
     border-radius: 0.45rem;
-    box-shadow: 0 11px 32px rgb(31 119 166 / 70%);
+    box-shadow: 0 11px 32px rgb(107 70 154 / 70%);
     padding: 40px;
     box-sizing: border-box;
     width: 100%;
     max-width: 450px;
     margin: auto;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     flex-direction: column;
-    background-color: #6b469a;
+    background-color: #8246ae;
     margin-bottom: 30px;
+    margin-top:40px;
 }
 
+.login-page h3 {
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
