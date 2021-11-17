@@ -116,7 +116,7 @@ h3 {
 }
 
 button {
-  width: 30%;
+  width: 100%;
   display: flex;
   justify-content: center;
   height: auto;
