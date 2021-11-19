@@ -30,6 +30,7 @@ function HomePage()  {
                     to take on a tech role and begin their new careers.  
                     If you are interested in getting involved with She Codes please contact us 
                 </p>
+                <img id="partners" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Partners.png"></img>
             </div>
             <Footer />
         </div>
