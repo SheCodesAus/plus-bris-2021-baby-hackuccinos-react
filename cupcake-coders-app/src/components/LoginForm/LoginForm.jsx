@@ -3,6 +3,16 @@ import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 
 function LoginForm() {
+    const [isRegistering, setIsRegistering] = useState(false)
+
+    const ToggleButton = () => {
+        return (
+            <div>
+                <button onClick={() => setIsRegistering(!isRegistering)}>Sign up</button>
+            </div>
+        )
+    }
+
     const [credentials, setCredentials] = useState({
         username: "",
         password: "",
@@ -44,6 +54,13 @@ function LoginForm() {
 
     return (
         <form class="login-form">
+            <h2 class="auth-h2">
+            {
+            isRegistering 
+            ? "Login"
+            : "Register"
+            }
+            </h2>
         <div class="label">
         <label htmlFor="username">Username:</label>
         <input 
@@ -62,9 +79,14 @@ function LoginForm() {
             onChange={handleChange}
         />
         </div>
-        <button type="submit" onClick={handleSubmit}>
-        Login 
+        <button type="submit" onClick={handleSubmit}>{
+            isRegistering
+            ? "Login"
+            : "Register"
+        }
         </button>
+        <h3>Not yet registered?<a onClick={() => setIsRegistering(!isRegistering)}> Click here to get started.</a>
+        </h3>
         </form>
     );
 }
