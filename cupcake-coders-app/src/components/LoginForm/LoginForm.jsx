@@ -43,7 +43,7 @@ function LoginForm() {
     };
 
     return (
-        <form>
+        <form class="login-form">
         <div class="label">
         <label htmlFor="username">Username:</label>
         <input 

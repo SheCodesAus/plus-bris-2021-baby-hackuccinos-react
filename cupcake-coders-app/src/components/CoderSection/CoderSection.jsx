@@ -18,7 +18,7 @@ function CoderSection () {
         </div>
         <CoderCard />
         <div id="coder-section-button">
-            <button class="coder-section-button">Meet the whole gang</button>
+            <a href="/coders"><button class="coder-section-button">Meet the whole gang</button></a>
         </div>
     </div>
     )

@@ -45,7 +45,6 @@ form input {
     padding: 40px;
     box-sizing: border-box;
     width: 100%;
-    max-width: 450px;
     margin: auto;
     display: flex;
     justify-content: center;

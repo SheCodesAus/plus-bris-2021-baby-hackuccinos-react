@@ -28,11 +28,10 @@ function HomePage()  {
                 <p>Our events are free thanks to the support of these organisations.
                     Our partners pave the way for our She Codes cupcake Coders 
                     to take on a tech role and begin their new careers.  
-                    If you are interested in getting involved with She Codes please contact us 
+                    If you are interested in partnering with She Codes <a href="https://shecodes.com.au/partner-with-us/">find out more here.</a> 
                 </p>
-                <img id="partners" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Partners.png"></img>
+                <a href="https://shecodes.com.au/partner-with-us/"><img id="partners" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Partners.png"/></a>
             </div>
-            <Footer />
         </div>
     )
 }

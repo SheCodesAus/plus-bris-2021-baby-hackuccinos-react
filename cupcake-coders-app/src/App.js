@@ -1,16 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Nav from "./components/Nav/Nav";
 import HomePage from "./pages/HomePage/HomePage";
 import CodersPage from "./pages/CodersPage/CodersPage";
-import ImpactPageCareer from "./pages/ImpactPageCareer/ImpactPageCareer";
-import ImpactPageEnrolment from "./pages/ImpactPageEnrolment/ImpactPageEnrolment";
-import ImpactPageHire from "./pages/ImpactPageHire/ImpactPageHire";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import ImpactPage from "./pages/ImpactPage/ImpactPage";
 
 function App () {
   return (
@@ -18,13 +15,15 @@ function App () {
         <Header />
 
         <Routes>
-          <Route exact path="/coders/:id" element={<CodersPage/>}/>
+          <Route exact path="/coders" element={<CodersPage/>}/>
           {/* <Route path="/">
             <HomePage />
           </Route> */}
 
           <Route exact path='/' element={<HomePage/>}/>
+          <Route exact path='/impact' element={<ImpactPage/>}/>
           <Route exact path='/login' element={<LoginPage/>}/>
+          <Route exact path='/register' element={<RegistrationPage/>}/>
           {/* <Route path="/careers">
             <ImpactPageCareer />
           </Route>
@@ -42,7 +41,7 @@ function App () {
           </Route> */}
         </Routes>
 
-        {/* <Footer /> */}
+        <Footer />
     </Router>
   );
 }
