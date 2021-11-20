@@ -7,7 +7,7 @@ function RegistrationPage()  {
     return (
     <div class="form-page">
         <TitleForms />
-        <p>Please add your own sweetness to your very own recipe below, to become part of the tribe!</p>
+        <p>We understand everyone's recipe for success is unique. Let's add your recipe below, to become part of the Cupcake Coder tribe!</p>
         <RegistrationForm />
     </div>
     )

@@ -136,9 +136,11 @@ function RegistrationForm () {
                 value={coderData.post_study}
                 />
             </div>
+            <div className="button-centre">
             <button onClick={handleSubmit} type="submit">
             Bake my Cupcake!
             </button>
+            </div>
         </form>
 );
 }

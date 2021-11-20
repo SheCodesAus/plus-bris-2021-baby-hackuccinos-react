@@ -47,3 +47,12 @@ form input {
     display: flex;
     justify-content: center;
 }
+
+.button-centre {
+    display: flex;
+    justify-content: center;
+}
+
+.form-page {
+    width: 60%;
+}
