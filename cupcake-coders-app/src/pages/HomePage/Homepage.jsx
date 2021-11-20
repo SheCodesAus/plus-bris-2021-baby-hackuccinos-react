@@ -32,7 +32,6 @@ function HomePage()  {
                 </p>
                 <a href="https://shecodes.com.au/partner-with-us/"><img id="partners" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Partners.png"/></a>
             </div>
-            <Footer />
         </div>
     )
 }
