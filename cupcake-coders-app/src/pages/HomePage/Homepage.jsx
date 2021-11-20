@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import CoderSection from "../../components/CoderSection/CoderSection";
 import Header from "../../components/Header/Header";
 import ImpactCounter from "../../components/ImpactCounter/ImpactCounter";
-import "./Homepage.css";
+import "./HomePage.css";
 import Footer from "../../components/Footer/Footer";
 
 function HomePage()  {
