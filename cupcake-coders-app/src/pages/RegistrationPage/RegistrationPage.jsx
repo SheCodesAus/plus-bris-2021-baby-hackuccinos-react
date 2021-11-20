@@ -5,9 +5,9 @@ import RegistrationForm from '../../components/RegistrationForm/RegistrationForm
 
 function RegistrationPage()  {
     return (
-    <div>
+    <div class="form-page">
         <TitleForms />
-        <h1>This is the Registration Page</h1>
+        <p>Please add your own sweetness to your very own recipe below, to become part of the tribe!</p>
         <RegistrationForm />
     </div>
     )

@@ -5,19 +5,19 @@ import "./LoginForm.css";
 function LoginForm() {
     const [isRegistering, setIsRegistering] = useState(false)
 
-    const ToggleButton = () => {
-        return (
-            <div>
-                <button onClick={() => setIsRegistering(!isRegistering)}>Sign up</button>
-            </div>
-        )
-    }
+    // const ToggleButton = () => {
+    //     return (
+    //         <div>
+    //             <button onClick={() => setIsRegistering(!isRegistering)}>Sign up</button>
+    //         </div>
+    //     )
+    // }
 
     const [credentials, setCredentials] = useState({
         username: "",
         password: "",
     });
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -47,18 +47,18 @@ function LoginForm() {
             postData().then((response) => {
                 console.log("This is the response",response);
                 window.localStorage.setItem("token", response.token);
-                history.push("/");
+                navigate ("/");
             });
             }
     };
 
     return (
         <form class="login-form">
-            <h2 class="auth-h2">
+            <h2 class="form-h2">
             {
             isRegistering 
-            ? "Login"
-            : "Register"
+            ? "Register"
+            : "Login"
             }
             </h2>
         <div class="label">
@@ -81,11 +81,11 @@ function LoginForm() {
         </div>
         <button type="submit" onClick={handleSubmit}>{
             isRegistering
-            ? "Login"
-            : "Register"
+            ? "Register"
+            : "Login"
         }
         </button>
-        <h3>Not yet registered?<a onClick={() => setIsRegistering(!isRegistering)}> Click here to get started.</a>
+        <h3 class="form_h3">Not yet registered?<a onClick={() => setIsRegistering(!isRegistering)}> Click here to get started.</a>
         </h3>
         </form>
     );
