@@ -29,6 +29,14 @@ form label {
     flex-direction: column;
 }
 
+.form_h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+}
+
 form input {
     padding: 15px;
     font-size: 16px;

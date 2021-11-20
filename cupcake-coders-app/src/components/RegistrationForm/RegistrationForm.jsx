@@ -36,19 +36,20 @@ function RegistrationForm () {
 
     return (
         <form>
+            <h2 class="form_h2">Cupcake Recipe</h2>
             <div class="label">
             <label htmlFor="student_id">Student ID:</label>
             <input 
-                // onChange={handleChange}
+                onChange={handleChange}
                 type="text"
                 id="student_id"
                 placeholder="Your secret Cupcake Coder Code."
                 value={coderData.student_id}
             /></div>
             <div class="label">
-                <label htmlFor="image">Enter URL for dare image:</label>
+                <label htmlFor="image">Enter URL for your headshot image:</label>
                 <input
-                // onChange={handleChange}
+                onChange={handleChange}
                 type="url"
                 id="image"
                 placeholder="Enter URL for image"
@@ -56,33 +57,83 @@ function RegistrationForm () {
                 />
             </div>
             <div class="label">
-                <label htmlFor="date_for_dare">What date?</label>
+                <label htmlFor="current_role">What's your current role?</label>
                 <input
-                // onChange={handleChange}
-                type="date"
-                id="date_for_dare"
-                placeholder="When will you complete your dare?"
-                value={coderData.date_for_dare}
-                />
-            </div>
-            <div class="label">
-                <label htmlFor="for_charity">Which charity will your dare support?</label>
-                <input
-                // onChange={handleChange}
+                onChange={handleChange}
                 type="text"
-                id="for_charity"
-                placeholder="What's the name of the charity you are supporting?"
-                value={coderData.for_charity}
+                id="current_role"
+                placeholder="Cupcake Coder and..."
+                value={coderData.current_role}
                 />
             </div>
             <div class="label">
-                <label htmlFor="charity_url">URL for charity website?</label>
+                <label htmlFor="tech_industry">You're in the tech industry True or False?</label>
                 <input
-                // onChange={handleChange}
-                type="url"
-                id="charity_url"
-                placeholder="Enter the URL for your charities website."
-                value={coderData.charity_url}
+                onChange={handleChange}
+                type="boolean"
+                id="tech_industry"
+                placeholder="Please write True or False"
+                value={coderData.tech_industry}
+                />
+            </div>
+            <div class="label">
+                <label htmlFor="programs_complete">Which of our She Codes programs have you completed?</label>
+                <input
+                onChange={handleChange}
+                type="text"
+                id="programs_complete"
+                placeholder="Eg. Plus Brisbane Cohort"
+                value={coderData.programs_complete}
+                />
+            </div>
+            <div class="label">
+                <label htmlFor="programs_interested">Any She Codes programs you are interested in?</label>
+                <input
+                onChange={handleChange}
+                type="text"
+                id="programs_interested"
+                placeholder="Eg. Plus Brisbane Cohort"
+                value={coderData.programs_interested}
+                />
+            </div>
+            <div class="label">
+                <label htmlFor="location">Any She Codes programs you are interested in?</label>
+                <input
+                onChange={handleChange}
+                type="text"
+                id="location"
+                placeholder="Eg. Brisbane, Perth, Sydney?"
+                value={coderData.location}
+                />
+            </div>
+            <div class="label">
+                <label htmlFor="mentoring">Are you a current mentor? Or interested in mentoring?</label>
+                <input
+                onChange={handleChange}
+                type="text"
+                id="mentoring"
+                placeholder="Current mentor. OR I'm interested!"
+                value={coderData.mentoring}
+                />
+            </div>
+            <div class="label">
+                <label htmlFor="partner_hire">Have you secured a position with a program partner? If yes, who did you join?</label>
+                <input
+                onChange={handleChange}
+                type="text"
+                id="partner_hire"
+                placeholder="Landed a role with BHP!"
+                value={coderData.partner_hire}
+                />
+            </div>
+            <div class="label">
+                <label htmlFor="post_study">Endeavoured with further study in the tech field? True or False?</label>
+                <input
+                onChange={handleChange}
+                type="text"
+                id="post_study"
+                placeholder="Please write True or False"
+                value={coderData.post_study}
                 />
             </div>
             <button type="submit">

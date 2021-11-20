@@ -54,7 +54,7 @@ function LoginForm() {
 
     return (
         <form class="login-form">
-            <h2 class="auth-h2">
+            <h2 class="form-h2">
             {
             isRegistering 
             ? "Login"
@@ -85,7 +85,7 @@ function LoginForm() {
             : "Register"
         }
         </button>
-        <h3>Not yet registered?<a onClick={() => setIsRegistering(!isRegistering)}> Click here to get started.</a>
+        <h3 class="form_h3">Not yet registered?<a onClick={() => setIsRegistering(!isRegistering)}> Click here to get started.</a>
         </h3>
         </form>
     );

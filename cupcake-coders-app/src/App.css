@@ -28,6 +28,10 @@ body {
   justify-content: center;
 }
 
+.form_page{
+  max-width: 400px;
+}
+
 .coder {
   display: flex;
   flex-direction: column;
@@ -124,11 +128,12 @@ button {
   font-family: raleway, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 10px 5px 10px 5px;
-  background-color: turquoise;
+  padding: 20px;
+  background-color: orange;
   color: white;  
-  border-radius: .45rem;
+  border-radius: .65rem;
   margin-top: 30px;
+  box-shadow: 0 4px 10px 0 rgb(17 0 0 / 23%)
 }
 
 .dare p {
