@@ -39,7 +39,7 @@ form input {
     justify-content: center;
 }
 
-/* .login-page {
+.login-page {
     border-radius: 0.45rem;
     box-shadow: 0 11px 32px rgb(107 70 154 / 70%);
     padding: 40px;
@@ -52,7 +52,7 @@ form input {
     background-color: #8246ae;
     margin-bottom: 30px;
     margin-top:40px;
-} */
+}
 
 .login-page h3 {
     align-items: center;
