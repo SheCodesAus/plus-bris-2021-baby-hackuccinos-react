@@ -5,7 +5,7 @@ import "./RegistrationForm.css";
 function RegistrationForm () {
 
     const [coderData, setCoderData] = useState({});
-    // const history = useHistory();
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         let { id, value } = e.target;
@@ -97,7 +97,7 @@ function RegistrationForm () {
                 />
             </div>
             <div class="label">
-                <label htmlFor="location">Any She Codes programs you are interested in?</label>
+                <label htmlFor="location">Where are you located?</label>
                 <input
                 onChange={handleChange}
                 type="text"
@@ -136,7 +136,7 @@ function RegistrationForm () {
                 value={coderData.post_study}
                 />
             </div>
-            <button type="submit">
+            <button onClick={handleSubmit} type="submit">
             Bake my Cupcake!
             </button>
         </form>

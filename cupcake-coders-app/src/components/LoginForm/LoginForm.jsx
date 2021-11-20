@@ -17,7 +17,7 @@ function LoginForm() {
         username: "",
         password: "",
     });
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -47,7 +47,7 @@ function LoginForm() {
             postData().then((response) => {
                 console.log("This is the response",response);
                 window.localStorage.setItem("token", response.token);
-                history.push("/");
+                navigate ("/");
             });
             }
     };
@@ -57,8 +57,8 @@ function LoginForm() {
             <h2 class="form-h2">
             {
             isRegistering 
-            ? "Login"
-            : "Register"
+            ? "Register"
+            : "Login"
             }
             </h2>
         <div class="label">
@@ -81,8 +81,8 @@ function LoginForm() {
         </div>
         <button type="submit" onClick={handleSubmit}>{
             isRegistering
-            ? "Login"
-            : "Register"
+            ? "Register"
+            : "Login"
         }
         </button>
         <h3 class="form_h3">Not yet registered?<a onClick={() => setIsRegistering(!isRegistering)}> Click here to get started.</a>
