@@ -5,13 +5,13 @@ import "./LoginForm.css";
 function LoginForm() {
     const [isRegistering, setIsRegistering] = useState(false)
 
-    const ToggleButton = () => {
-        return (
-            <div>
-                <button onClick={() => setIsRegistering(!isRegistering)}>Sign up</button>
-            </div>
-        )
-    }
+    // const ToggleButton = () => {
+    //     return (
+    //         <div>
+    //             <button onClick={() => setIsRegistering(!isRegistering)}>Sign up</button>
+    //         </div>
+    //     )
+    // }
 
     const [credentials, setCredentials] = useState({
         username: "",
