@@ -6,6 +6,8 @@
     object-fit: cover;
     border-radius: .45rem;
     box-shadow: 0 11px 32px rgb(31 119 166 / 40%);
+    /* position: relative;
+    z-index: -1; */
 }
 
 .coder-card {
@@ -37,4 +39,33 @@
 
 .card:hover .centered {
     display: block;
+}
+
+.badge-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    position: absolute;
+    bottom: -15px;   
+
+}
+
+.badge {
+    width: 50px;
+}
+
+.cupcake {
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+
+}
+
+.cupcake-container{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
 }

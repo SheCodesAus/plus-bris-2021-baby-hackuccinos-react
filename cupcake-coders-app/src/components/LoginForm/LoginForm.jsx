@@ -78,7 +78,7 @@ function LoginForm() {
             placeholder="Password"
             onChange={handleChange}
         />
-        <input type="checkbox" onClick="myFunction()">Show Password</input>
+        {/* <input type="checkbox" onClick="myFunction()">Show Password</input> */}
         {/* <script>
             function myFunction() {
                 var x = document.getElementById("myInput");
