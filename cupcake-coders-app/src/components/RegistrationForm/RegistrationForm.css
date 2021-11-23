@@ -56,3 +56,10 @@ form input {
 .form-page {
     width: 60%;
 }
+
+.form-p {
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
+}
