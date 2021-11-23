@@ -47,6 +47,13 @@ function RegistrationForm () {
                 value={coderData.student_id}
             /></div>
             <div class="label">
+                <p class="form-p">Click on the "Choose File" button to upload your amazing headshot:</p>
+                {/* <form action="/action_page.php"> */}
+                <input type="file" id="myFile" name="filename"/>
+                {/* <input type="submit"/> */}
+                {/* </form> */}
+            </div>
+            <div class="label">
                 <label htmlFor="image">Enter URL for your headshot image:</label>
                 <input
                 onChange={handleChange}
