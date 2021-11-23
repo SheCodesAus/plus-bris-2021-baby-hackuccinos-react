@@ -23,13 +23,28 @@ function CoderCard(props) {
                 <img class="clip-me" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/free-hugs-day.png" alt="Description of image"/>
                 <div class="badge-row">
                     {
-                        testCoder.student_id &&
+                        testCoder.student_id
+                            ? testCoder.programs_complete
+                                ? <img class="badge" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(31).png" alt="Further She Codes learning"/>
+                                : <img class="badge" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(30).png" alt="Enrolled badge"/>
+                            : <></> 
+                    }
+                    {
+                        testCoder.tech_industry &&
+                        <img class="badge" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(28).png" alt="Joined tech industry"/>
+                    }
+                    {
+                        testCoder.partner_hire &&
+                        <img class="badge" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(24).png" alt="Further learning badge"/>
+                    }
+                    {
+                        testCoder.post_study &&
                         <img class="badge" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(23).png" alt="Further learning badge"/>
                     }
-                    <img class="badge" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(24).png" alt="Further learning badge"/>
-                    <img class="badge" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(24).png" alt="Further learning badge"/>
-                    <img class="badge" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(24).png" alt="Further learning badge"/>
-                    <img class="badge" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(24).png" alt="Further learning badge"/>
+                    {
+                        testCoder.mentoring &&
+                        <img class="badge" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/mentor-badge.png" alt="Mentoring badge"/>
+                    }
                 </div>
             </div>
             <img class="clip-me" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/blue-headshot.png" alt="Description of image"/>

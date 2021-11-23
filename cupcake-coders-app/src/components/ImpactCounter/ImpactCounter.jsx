@@ -5,6 +5,8 @@ import "./ImpactCounter.css";
 function ImpactCounter () {
     return (
         <div class='counter'>
+            <div class="circle">
+            </div>
             <h1>This is the impact counter</h1>
             <a href="#placements">Placements</a>
         </div>
