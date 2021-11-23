@@ -8,7 +8,7 @@ import Footer from "../../components/Footer/Footer";
 
 function HomePage()  {
     return (
-        <div>
+        <div className="home-div">
             <div class='intro'>
                 <h1>Hello there,</h1>
                 <h2>welcome to the world of our "cupcake coders"</h2>

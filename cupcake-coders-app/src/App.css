@@ -28,6 +28,10 @@ body {
   justify-content: center;
 }
 
+.form_page{
+  max-width: 400px;
+}
+
 .coder {
   display: flex;
   flex-direction: column;
@@ -46,47 +50,24 @@ body {
   margin-top: 2rem;
 }
 
-.dare h2 {
-  text-transform: uppercase;
-  text-align: left;
-  color: black;
-}
-
-.dare-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #38F3FF;
-  color: darkslategrey;
-  text-align: center;
-  align-items: center;
-}
-
 .dare-page button {
   width: 30%;
 }
 
-.dare-page img {
+/* .dare-page img {
   width: 300px;
   height: 300px;
   object-fit: cover;
   border-radius: .45rem;
   box-shadow: 0 11px 32px rgb(31 119 166 / 40%);
-}
+} */
 
-.dare-page a {
-  padding: 20px;
-  font-family: spartan, sans-serif;
-  font-weight: 600;
-  color: black;
-}
 
 h1 {
   color: black;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 60px;
-  line-height: 1.4rem;
 }
 
 h2 {
@@ -116,7 +97,6 @@ h3 {
 }
 
 button {
-  width: 100%;
   display: flex;
   justify-content: center;
   height: auto;
@@ -124,11 +104,22 @@ button {
   font-family: raleway, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 10px 5px 10px 5px;
-  background-color: turquoise;
+  padding: 15px;
+  background-color: orange;
   color: white;  
-  border-radius: .45rem;
+  border-radius: 160px;
   margin-top: 30px;
+  box-shadow: 0 4px 10px 0 rgb(17 0 0 / 23%);
+  cursor: pointer;
+  width: 50%;
+}
+
+button:hover {
+  background-color: turquoise;
+}
+
+button a {
+  color: white;
 }
 
 .dare p {
