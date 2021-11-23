@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import HomePage from "./pages/HomePage/HomePage";
+import Homepage from "./pages/HomePage/Homepage";
 import CodersPage from "./pages/CodersPage/CodersPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
@@ -22,7 +22,7 @@ function App () {
             <HomePage />
           </Route> */}
 
-          <Route exact path='/' element={<HomePage/>}/>
+          <Route exact path='/' element={<Homepage/>}/>
           <Route exact path='/impact' element={<ImpactPage/>}/>
           <Route exact path='/login' element={<LoginPage/>}/>
           <Route exact path='/submit' element={<RegistrationPage/>}/>
