@@ -13,36 +13,8 @@ function ErrorPage() {
         <div>
             <h1 class="page404">404 Error</h1>
             <h2 class="crumble">Oh noooo... cupcake crumbles</h2>
-            <img className="error_pic" src={error_pic} alt="errorpage"/>
-        </div>
-        <div class="crumb">                
-            <div>
-                <img src={crumb1} height="75px" width="75px"></img>                
-            </div>
+            <Link to="/"><img className="error_pic" src={error_pic} alt="errorpage"/></Link>
             
-            <div>                    
-                <img src={crumb2} height="75px" width="75px"></img>
-            </div>                
-            
-            <div>                    
-                <img src={crumb3} height="75px" width="75px" ></img>
-            </div>   
-                         
-            <div>                    
-                <img src={crumb2} height="75px" width="75px"></img>                
-            </div>                
-            
-            <div>                    
-                <img src={crumb3} height="75px" width="75px"></img>
-            </div>                
-            
-            <div>                    
-                <img src={crumb2} height="75px" width="75px"></img>                
-            </div>                
-            
-            <div>                    
-                <img src={crumb1} height="75px" width="75px"></img>
-            </div>            
         </div>
     </div>
     )
