@@ -39,7 +39,7 @@ function CoderCard(props) {
                     }
                     {
                         testCoder.post_study &&
-                        <img class="badge" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(23).png" alt="Further learning badge"/>
+                        <img class="badge" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(23).png" alt="Further study badge"/>
                     }
                     {
                         testCoder.mentoring &&

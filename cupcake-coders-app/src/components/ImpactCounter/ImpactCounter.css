@@ -1,4 +1,57 @@
 .counter {
     background-color: orange;
-    height: 400px;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 11px 32px rgb(107 70 154 / 70%);
+}
+
+.impact-label {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.impact-label h3 {
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+}
+
+.impact-label a {
+    display: flex;
+    justify-content: right;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Raleway, sans-serif;
+}
+
+.number h2 {
+    font-size: 100px;
+    font-weight: 300;
+    align-items: center;
+    color: black;
+}
+
+.impact-circle {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
 }
