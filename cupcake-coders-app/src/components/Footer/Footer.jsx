@@ -6,9 +6,10 @@ function Footer() {
     return (
         <div class="footer">
             <div class="socials">
-                <a href="https://www.facebook.com/belinda.s.lloyd/" class="fa fa-facebook"></a>
-                <a href="https://github.com/bel-lloyd" class="fa fa-github"></a>
-                <a href="https://www.linkedin.com/in/bslloyd/" class="fa fa-linkedin"></a>
+                <a href="https://www.facebook.com/shecodesaustralia/" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/shecodesaus/?hl=en" class="fa fa-instagram"></a>
+                <a href="https://www.linkedin.com/in/shecodesaustralia/" class="fa fa-linkedin"></a>
+                <a href="https://twitter.com/shecodesaus" class="fa fa-twitter"></a>
             </div>
             <div>
                 <a href="/">Built by Baby Hackuccinos ©2021</a>
