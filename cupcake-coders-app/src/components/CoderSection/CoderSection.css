@@ -23,10 +23,10 @@ h3 {
     justify-content: center;
 }
 
-#coder-section-button {
+.coder-section-button {
     display: flex;
-    justify-content: center; 
-    width: 30%;   
+    justify-content: center;
+    text-decoration: none;    
 }
 
 .legend {
@@ -36,7 +36,7 @@ h3 {
 }
 
 .legend p {
-    font-size: 10px;
+    font-size: 20px;
     border: none;
 }
 
