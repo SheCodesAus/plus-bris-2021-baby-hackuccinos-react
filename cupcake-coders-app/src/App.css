@@ -136,3 +136,16 @@ button a {
   text-align: center;
 }
 
+/* contactpage  */
+.contactpage {
+  text-align: center;
+}
+
+.logomedia {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  width: 2%;
+
+  
+}
