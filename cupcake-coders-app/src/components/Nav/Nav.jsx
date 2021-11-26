@@ -3,7 +3,16 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Nav.css";
 
-function Nav() {
+const Nav = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(
+        window.localStorage.getItem("token")
+    );
+
+    const logout = () => {
+        localStorage.clear();
+        setIsLoggedIn(false);
+    };
+
     return (
         <nav>
             <Link to="/">Home</Link>

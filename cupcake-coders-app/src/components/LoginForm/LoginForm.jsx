@@ -5,14 +5,6 @@ import "./LoginForm.css";
 function LoginForm() {
     const [isRegistering, setIsRegistering] = useState(false)
 
-    // const ToggleButton = () => {
-    //     return (
-    //         <div>
-    //             <button onClick={() => setIsRegistering(!isRegistering)}>Sign up</button>
-    //         </div>
-    //     )
-    // }
-
     const [credentials, setCredentials] = useState({
         username: "",
         password: "",
@@ -78,7 +70,7 @@ function LoginForm() {
             placeholder="Password"
             onChange={handleChange}
         />
-        <input type="checkbox" onClick="myFunction()">Show Password</input>
+        {/* <input type="checkbox" onClick="myFunction()">Show Password</input> */}
         {/* <script>
             function myFunction() {
                 var x = document.getElementById("myInput");

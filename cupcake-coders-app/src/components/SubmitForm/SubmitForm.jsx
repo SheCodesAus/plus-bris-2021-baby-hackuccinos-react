@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./RegistrationForm.css";
+import "./SubmitForm.css";
 
 function RegistrationForm () {
 
@@ -36,7 +36,7 @@ function RegistrationForm () {
 
     return (
         <form>
-            <h2 class="form_h2">Cupcake Recipe</h2>
+            <h2 class="form_h2">Your Cupcake Recipe</h2>
             <div class="label">
             <label htmlFor="student_id">Student ID:</label>
             <input 
