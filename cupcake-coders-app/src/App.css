@@ -129,3 +129,26 @@ button a {
   width: 300px;
 }
 
+.dare li {
+  text-align: left;
+  font-family: spartan, sans-serif;
+}
+
+/* errorpage  */
+.page404 {
+  text-align: center;
+}
+
+/* contactpage  */
+.contactpage {
+  text-align: center;
+}
+
+.logomedia {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  width: 2%;
+
+  
+}

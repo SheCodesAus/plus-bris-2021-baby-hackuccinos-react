@@ -18,20 +18,11 @@ const Nav = () => {
             <Link to="/">Home</Link>
             <Link to="/impact">Impact</Link>
             <Link to="/coders">Coders</Link>
-            {isLoggedIn 
-            ? (
-                <Link onClick={logout}>Log Out</Link>
-            ) 
-            : ( 
-                <div className="login">
-                    <Link to="/login">Login</Link>
-                </div>
-            )}
-            <Link to="/submit">Submit</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
+            <Link to="/contact">Contact Us</Link>
         </nav>
     )
 }
-
 
 export default Nav;
