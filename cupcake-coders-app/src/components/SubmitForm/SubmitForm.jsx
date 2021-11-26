@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./RegistrationForm.css";
+import "./SubmitForm.css";
 
 function RegistrationForm () {
 
@@ -36,7 +36,7 @@ function RegistrationForm () {
 
     return (
         <form>
-            <h2 class="form_h2">Cupcake Recipe</h2>
+            <h2 class="form_h2">Your Cupcake Recipe</h2>
             <div class="label">
             <label htmlFor="student_id">Student ID:</label>
             <input 
@@ -46,6 +46,13 @@ function RegistrationForm () {
                 placeholder="Your secret Cupcake Coder Code."
                 value={coderData.student_id}
             /></div>
+            <div class="label">
+                <p class="form-p">Click on the "Choose File" button to upload your amazing headshot:</p>
+                {/* <form action="/action_page.php"> */}
+                <input type="file" id="myFile" name="filename"/>
+                {/* <input type="submit"/> */}
+                {/* </form> */}
+            </div>
             <div class="label">
                 <label htmlFor="image">Enter URL for your headshot image:</label>
                 <input
