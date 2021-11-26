@@ -18,32 +18,12 @@ function App () {
 
         <Routes>
           <Route exact path="/coders" element={<CodersPage/>}/>
-          {/* <Route path="/">
-            <HomePage />
-          </Route> */}
-
           <Route exact path='/' element={<HomePage/>}/>
           <Route exact path='/impact' element={<ImpactPage/>}/>
           <Route exact path='/login' element={<LoginPage/>}/>
           <Route exact path='/submit' element={<RegistrationPage/>}/>
           <Route exact path='/errorpage' element={<ErrorPage/>}/>
           <Route exact path='/contact' element={<ContactPage/>}/>
-
-          {/* <Route path="/careers">
-            <ImpactPageCareer />
-          </Route>
-          <Route path="/enrollments">
-            <ImpactPageEnrolment />
-          </Route>
-          <Route path="/hires">
-            <ImpactPageHire />
-          </Route>
-          <Route path="/register">
-            <RegistrationPage />
-          </Route>
-          <Route path="/login">
-            <LoginPage />
-          </Route> */}
         </Routes>
 
         <Footer />
