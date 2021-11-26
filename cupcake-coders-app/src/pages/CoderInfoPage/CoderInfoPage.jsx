@@ -71,20 +71,20 @@ const CoderInfoPage = () => {
         history.push('/')
     }
     
-    const ReadDare = () => {
+    const ReadCoder = () => {
         return (
             <div className="coder-info">
                 <div className="coder">
                     <h2>Welcome to profile of coder ${coderData.id}</h2>
-                    <img src={coderData.image}/>
+                    <img src={coderData.image} />
                 </div>
-           </div>
+            </div>
         )
     }   
 
     return (
         <div class="coder-page">
-            <img src={coderData.image }/>
+            <img src={coderData.image } />
                 { 
                     localStorage.getItem("token") 
                     && isEditing == false

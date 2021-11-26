@@ -1,7 +1,6 @@
 import React, { useEffect, useState }  from "react";
 import { Link } from "react-router-dom";
 import CoderCard from "../../components/CoderCard/CoderCard";
-import "./CodersPage.css";
 
 
 function CodersPage() {

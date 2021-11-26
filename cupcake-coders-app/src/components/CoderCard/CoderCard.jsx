@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./CoderCard.css";
 import { allCoders } from "../../data.js";
 
