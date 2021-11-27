@@ -1,17 +1,17 @@
-import React, { useEffect, useState }  from "react";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
-import "./Nav.css";
+import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import './Navbar.css'
 
 const Nav = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(
-        window.localStorage.getItem("token")
-    );
+        window.localStorage.getItem('token')
+    )
 
     const logout = () => {
-        localStorage.clear();
-        setIsLoggedIn(false);
-    };
+        localStorage.clear()
+        setIsLoggedIn(false)
+    }
 
     return (
         <nav>
@@ -25,4 +25,4 @@ const Nav = () => {
     )
 }
 
-export default Nav;
+export default Nav
