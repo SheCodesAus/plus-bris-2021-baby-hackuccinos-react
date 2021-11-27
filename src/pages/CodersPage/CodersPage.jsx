@@ -19,13 +19,11 @@ function CodersPage() {
 
         return (
         <div id="coders-list">
-            <h1>This is the coders page.</h1>
         {codersList.map((CoderData, key) => {
         return <CoderCard key={key} coderData={CoderData} />;
         })}
         </div>
     );
-return <h1>This is the coders page.</h1>
 }
 
     
