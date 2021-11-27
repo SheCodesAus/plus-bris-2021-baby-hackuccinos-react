@@ -25,7 +25,6 @@ function CodersPage() {
         })}
         </div>
     );
-return <h1>This is the coders page.</h1>
 }
 
     
