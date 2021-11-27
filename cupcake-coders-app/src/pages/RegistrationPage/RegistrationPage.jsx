@@ -1,14 +1,14 @@
-import React, { useEffect, useHistory, useState }  from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import TitleForms from '../../components/TitleForms/TitleForms';
-import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
+import SubmitForm from '../../components/SubmitForm/SubmitForm';
 
 function RegistrationPage()  {
     return (
-    <div>
+    <div class="form-page">
         <TitleForms />
-        <h1>This is the Registration Page</h1>
-        <RegistrationForm />
+        <p>We understand everyone's recipe for success is unique. Let's add your recipe below, to become part of the Cupcake Coder tribe!</p>
+        <SubmitForm />
     </div>
     )
 

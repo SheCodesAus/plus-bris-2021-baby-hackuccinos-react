@@ -29,6 +29,14 @@ form label {
     flex-direction: column;
 }
 
+.form_h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+}
+
 form input {
     padding: 15px;
     font-size: 16px;
@@ -38,4 +46,20 @@ form input {
 .logo {
     display: flex;
     justify-content: center;
+}
+
+.button-centre {
+    display: flex;
+    justify-content: center;
+}
+
+.form-page {
+    width: 60%;
+}
+
+.form-p {
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
 }

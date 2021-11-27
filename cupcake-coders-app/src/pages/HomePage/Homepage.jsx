@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import CoderSection from "../../components/CoderSection/CoderSection";
 import Header from "../../components/Header/Header";
 import ImpactCounter from "../../components/ImpactCounter/ImpactCounter";
-import "./HomePage.css";
+import "./Homepage.css";  
 import Footer from "../../components/Footer/Footer";
 
 function HomePage()  {
     return (
-        <div>
+        <div className="home-div">
             <div class='intro'>
                 <h1>Hello there,</h1>
                 <h2>welcome to the world of our "cupcake coders"</h2>

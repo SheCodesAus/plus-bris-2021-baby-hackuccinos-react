@@ -8,7 +8,6 @@
 .coder-section-centered-h1 {
     text-align: center;
     font-size: 50px;
-    padding: 20px;
 }
 
 h3 {
@@ -24,8 +23,24 @@ h3 {
     justify-content: center;
 }
 
-#coder-section-button {
+.coder-section-button {
     display: flex;
-    justify-content: center; 
-    width: 30%;   
+    justify-content: center;
+    text-decoration: none;    
+}
+
+.legend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.legend p {
+    font-size: 20px;
+    border: none;
+}
+
+.legend img {
+    width: 30px;
+    height: 30px;
 }
