@@ -5,12 +5,17 @@ import { Link } from "react-router-dom";
 
 function CoderCard(props) {
     const { coderData } = props;
-    console.log(coderData)
+    console.log('coder data', coderData)
     console.log(process.env.REACT_APP_API_URL)
     // console.log(allCoders)
 
     // const testCoder = allCoders[0]
     // console.log(testCoder)
+    if (!coderData) {
+        return (
+            <div>Nothing to see here</div>
+        )
+    }
 
     return (
         <div>
