@@ -15,7 +15,6 @@ function ImpactPage() {
                 <h2>welcome to the world of our "cupcake coders"</h2>
                 <p>Insert text here <a href="https://shecodes.com.au/impact-report/">find out more here.</a></p>
             </div>
-            
             <div>
             <a name="placements"></a>
             <Placements />
