@@ -27,13 +27,26 @@ function ImpactCounter () {
 
 	return Math.floor( count );
     };
+
+    const [enrolments, setEnrolments] = useState([]);
+
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_URL}coders/enrolments/`)
+        .then((results) => {
+            console.log("This is the no. of enrolments", results)
+        return results.json();
+        })
+        .then ((data) => {
+            setEnrolments(data);
+        });
+    },[]);
     
     return (
         <div class='counter'>
             <div class="impact-circle" onclick="location.href='https://shecodes.com.au/partner-with-us/">
                 <div class="circle">
                     <div class="number">
-                        <CountUpAnimation>4065</CountUpAnimation>
+                        <CountUpAnimation>4605</CountUpAnimation>
                     </div>
                 </div>
                 <div class="impact-label">
