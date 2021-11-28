@@ -56,3 +56,14 @@
     justify-content: center;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .counter {
+      display: flex;
+      flex-direction: column;
+    }
+    .legend {
+        display: flex;
+        flex-direction: column; 
+    }
+  }

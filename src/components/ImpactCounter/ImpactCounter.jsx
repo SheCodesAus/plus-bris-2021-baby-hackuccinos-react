@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "./ImpactCounter.css";
+import { HashLink as Link } from 'react-router-hash-link';
 
 function ImpactCounter () {
     
@@ -34,7 +34,7 @@ function ImpactCounter () {
         fetch(`${process.env.REACT_APP_API_URL}coders/enrolments/`)
         .then((results) => {
             console.log("This is the no. of enrolments", results)
-        return results.json();
+        return results
         })
         .then ((data) => {
             setEnrolments(data);
@@ -46,12 +46,12 @@ function ImpactCounter () {
             <div class="impact-circle" onclick="location.href='https://shecodes.com.au/partner-with-us/">
                 <div class="circle">
                     <div class="number">
-                        <CountUpAnimation>4605</CountUpAnimation>
+                        <CountUpAnimation>4025</CountUpAnimation>
                     </div>
                 </div>
                 <div class="impact-label">
                     <h3>Women taught</h3>
-                    <a href="#enrolments">find out more</a>
+                    <Link to="/impact#enrolments">find out more</Link>
                 </div>
             </div>
             <div class="impact-circle">
