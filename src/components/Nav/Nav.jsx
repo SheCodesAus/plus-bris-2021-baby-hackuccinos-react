@@ -69,7 +69,7 @@ const Nav = () => {
             <Link to="/impact">Impact</Link>
             <Link to="/contact">Contact</Link>
             <NavbarDropdown>
-                <NavbarDropdown.Toggle className="menu__item">
+                <NavbarDropdown.Toggle className="nav-drop">Portal
                 <NavbarDropdown.Open>
                 <FontAwesomeIcon icon={faCaretDown} fixedWidth className="arrow" />
                 </NavbarDropdown.Open>
@@ -96,7 +96,6 @@ const Nav = () => {
             </NavbarDropdown.Item>
             </NavbarDropdown.CSSTransitionMenu>
             </NavbarDropdown>
-            <NavbarDropdown className="nav-drop">Portal</NavbarDropdown>
             {/* <Link to="/coders">Coders</Link>
             <Link to="/login">Login</Link>
             <Link to="/submit">Submit</Link> */}
