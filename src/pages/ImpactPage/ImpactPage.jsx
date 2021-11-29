@@ -8,7 +8,6 @@ import TechPursuedRole from "../../components/TechPursuedRole/TechPursuedRole";
 
 function ImpactPage() {
     return (
-
             <div className="impact-div">
             <div class='impactintro'>
                 <h1>Hello there,</h1>
@@ -23,7 +22,6 @@ function ImpactPage() {
             <a name="techpursuedrole"></a>
             <TechPursuedRole />
             </div>
-            
         </div>
     )
 }

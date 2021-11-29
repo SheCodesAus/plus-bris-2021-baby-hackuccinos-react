@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CoderCard from "../CoderCard/CoderCard";
 import "./CoderSection.css";
 
 function CoderSection () {
+    const [codersList, setCodersList] = useState([]);
+
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_URL}coders/`)
+        .then((results) => {
+            console.log("This is the results", results)
+        return results.json();
+        })
+        .then ((data) => {
+            setCodersList(data);
+        });
+    },[]);
+
     return (
     <div class="coder-section-main-div">
         <div class="coder-section-centered-h1">

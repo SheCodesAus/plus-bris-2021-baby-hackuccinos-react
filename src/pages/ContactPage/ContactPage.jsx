@@ -9,18 +9,18 @@ import linkedin_logo from "../../components/static file/linkedin_logo.png";
 
 function ContactPage()  {
     return (
-    <div class="contactpage">        
-        <div>
+    <div class="form-page">                
+        <h1>Contact Us</h1>
+        <h2> we'd love to hear from you</h2>
+        <p>Do you want to order our secret recipe? Please contact us and we would love to share it</p>
+        
+        {/* <div>
             <a href="https://www.facebook.com/shecodesaustralia"><img class="logomedia" src={facebook_logo} alt="facebook_logo" /></a>
             <a href="https://twitter.com/she_codes"><img class="logomedia" src={twitter_logo} alt="twitter_logo" /></a>
             <a href="https://www.instagram.com/shecodesaus"><img class="logomedia" src={instagram_logo} alt="instagram_logo" /></a>
             <a href="https://www.linkedin.com/company/shecodesaustralia"><img class="logomedia" src={linkedin_logo} alt="linkedin_logo" /></a>
             
-        </div>
-        
-        <h1>Contact Us</h1>
-        <p>Do you want to order our secret recipe? Please contact us and we would love to share it</p>
-        
+        </div> */}
         <ContactForm />
         
 

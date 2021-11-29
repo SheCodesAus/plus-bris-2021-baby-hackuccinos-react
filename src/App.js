@@ -22,8 +22,8 @@ function App () {
           <Route exact path='/impact' element={<ImpactPage/>}/>
           <Route exact path='/login' element={<LoginPage/>}/>
           <Route exact path='/submit' element={<RegistrationPage/>}/>
-          <Route exact path='/errorpage' element={<ErrorPage/>}/>
           <Route exact path='/contact' element={<ContactPage/>}/>
+          <Route component={ErrorPage}/>
         </Routes>
 
         <Footer />
