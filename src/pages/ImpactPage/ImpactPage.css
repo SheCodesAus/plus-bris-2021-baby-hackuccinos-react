@@ -6,3 +6,13 @@
     width: 100%;
     padding: 50px;
 }
+.column {
+    width: 29%;
+    height: 250px;
+    padding: 2%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.column img {
+    height: 24px;
+}

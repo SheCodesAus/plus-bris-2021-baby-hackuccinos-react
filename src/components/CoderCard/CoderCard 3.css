@@ -1,0 +1,85 @@
+.clip-me {
+    -webkit-clip-path: polygon(73% 100%, 26% 100%, 16% 59%, 13% 58%, 8% 58%, 6% 55%, 4% 51%, 2% 47%, 3% 42%, 6% 39%, 11% 36%, 15% 34%, 17% 28%, 18% 25%, 21% 19%, 26% 17%, 32% 14%, 38% 13%, 41% 10%, 41% 5%, 37% 3%, 47% 1%, 50% 3%, 55% 7%, 57% 10%, 57% 14%, 62% 15%, 68% 16%, 73% 19%, 78% 24%, 83% 28%, 85% 31%, 87% 35%, 87% 35%, 91% 35%, 94% 36%, 97% 39%, 99% 47%, 98% 52%, 94% 55%, 89% 57%, 83% 59%, 79% 60%);
+    clip-path: polygon(73% 100%, 26% 100%, 16% 59%, 13% 58%, 8% 58%, 6% 55%, 4% 51%, 2% 47%, 3% 42%, 6% 39%, 11% 36%, 15% 34%, 17% 28%, 18% 25%, 21% 19%, 26% 17%, 32% 14%, 38% 13%, 41% 10%, 41% 5%, 37% 3%, 47% 1%, 50% 3%, 55% 7%, 57% 10%, 57% 14%, 62% 15%, 68% 16%, 73% 19%, 78% 24%, 83% 28%, 85% 31%, 87% 35%, 87% 35%, 91% 35%, 94% 36%, 97% 39%, 99% 47%, 98% 52%, 94% 55%, 89% 57%, 83% 59%, 79% 60%);
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: .45rem;
+    box-shadow: 0 11px 32px rgb(31 119 166 / 40%);
+    /* position: relative;
+    z-index: -1; */
+}
+
+.coder-card {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+.card {
+    position: relative;
+}
+
+.card:hover img {
+    transform: scale(1);
+    filter: brightness(50%);
+}
+
+.centered {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: spartan, sans-serif;
+    font-weight:700;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card:hover .centered {
+    display: block;
+}
+
+.badge-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    position: absolute;
+    bottom: -15px;   
+
+}
+
+.badge {
+    width: 60px;
+}
+
+.badge :hover {
+    transform: scale(1);
+}
+
+.cupcake {
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+
+}
+
+.cupcake :hover {
+    transform: scale(1);
+    filter: brightness(50%);
+}
+
+.clip-me :hover {
+    transform: scale(1);
+    filter: brightness(50%);
+}
+
+.cupcake-container{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
