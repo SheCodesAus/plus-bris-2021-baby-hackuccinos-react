@@ -2,88 +2,35 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ContactForm.css";
 
-function ContactForm () {
-
-    const [coderData, setCoderData] = useState({});
-    const navigate = useNavigate();
-
-    const handleChange = (e) => {
-        let { id, value } = e.target;
-        setCoderData((prevCoderData) => ({
-            ...prevCoderData,
-            [id]: value, 
-        }));
-
-    };
-
-
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-
-
-        const response = await fetch(
-            `${process.env.REACT_APP_API_URL}coders/`, 
-            {
-            method: "post",
-            headers: {
-                "Authorization": `Token ${localStorage.getItem('token')}`,
-                "Content-type": "application/json",
-            },
-            body: JSON.stringify(coderData),
-            }
-        );
-    }
-
+function ContactForm () {    
     return (
-        <contact>
-            <div class="label">
-                <label htmlFor="name">Name</label>
-                <input
-                onChange={handleChange}
-                type="text"
-                id="current_role"
-                placeholder="Name"
-                value={coderData.current_role}
-                />
-            </div>
-            <div class="label">
-                <label htmlFor="Email address">Email address</label>
-                <input
-                onChange={handleChange}
-                type="text"
-                id="current_role"
-                placeholder="Email"
-                value={coderData.current_role}
-                />
-            </div>
-            <div class="label">
-                <label htmlFor="Phone Number">Phone Number</label>
-                <input
-                onChange={handleChange}
-                type="text"
-                id="current_role"
-                placeholder="Phone"
-                value={coderData.current_role}
-                />
-            </div>
-            
-            <div class="label">
-                <label htmlFor="Message">Message</label>
-                <input
-                onChange={handleChange}
-                type="text"
-                id="current_role"
-                placeholder="Message"
-                value={coderData.current_role}
-                />
-            </div>
-            
-            <div className="button-centre">
-            <button onClick={handleSubmit} type="submit">
-            Order submitted!
-            </button>
-            </div>
-        </contact>
+        <form action="https://formspree.io/f/xzbopgjl" method="post">
+             <div class="label">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name"/>
+                    </div>
+                    <div class="label">
+                        <label for="mail">Email</label>
+                        <input type="email" id="mail" name="email" placeholder="Email"/>
+                    </div>
+                    <div class="label">
+                        <label for="Phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" placeholder="Phone"/>
+                    </div>
+                    <div class="label">
+                        <label for="message">Message</label>
+                        <input id="message" name="message" placeholder="Message"></input>
+                    </div>
+                    <div class="label">
+                        <button type="submit">Send</button>
+                    </div>
+
+                    <div class="label_checkbox">
+                        <input type="checkbox" id="checkboxInput"/>
+                        <label for="checkboxInput">Tick the box if you want to subscribe our newsletter</label>
+                    </div>
+
+        </form>
 );
 }
 
