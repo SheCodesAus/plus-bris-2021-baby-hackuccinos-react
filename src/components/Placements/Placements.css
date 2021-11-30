@@ -1,4 +1,10 @@
-.placements {
-    background-color: #8246af;
+.placements-img {
+    background-color: green;
     height: 400px;
 }
+
+.placements {
+    background-color: purple;
+    height: 400px;
+}
+

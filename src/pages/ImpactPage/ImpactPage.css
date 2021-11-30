@@ -1,4 +1,4 @@
-.impactintro {
+.impact-intro {
     padding: 50px;
 
 }
@@ -6,13 +6,31 @@
     width: 100%;
     padding: 50px;
 }
-.column {
-    width: 29%;
-    height: 250px;
-    padding: 2%;
-    display: inline-block;
-    vertical-align: middle;
-}
-.column img {
-    height: 24px;
-}
+
+.impact-sections {
+    margin: 15px;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+  
+  .placements-img {
+    background-color: blue;
+    height: 100px;
+  }
+  
+  .placements {
+    background-color: green;
+    height: 100px;
+  }
