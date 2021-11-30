@@ -1,4 +1,10 @@
-.Placements {
+.placements-img {
+    background-color: green;
+    height: 400px;
+}
+
+.placements {
     background-color: purple;
     height: 400px;
 }
+
