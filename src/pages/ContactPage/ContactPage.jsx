@@ -24,18 +24,6 @@ function ContactPage()  {
 export default ContactPage;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 // import "../RegistrationForm/RegistrationForm.css";
