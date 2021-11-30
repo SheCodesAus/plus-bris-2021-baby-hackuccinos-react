@@ -25,7 +25,7 @@ function ContactForm () {
                         <button type="submit">Send</button>
                     </div>
 
-                    <div class="label">
+                    <div class="label_checkbox">
                         <input type="checkbox" id="checkboxInput"/>
                         <label for="checkboxInput">Tick the box if you want to subscribe our newsletter</label>
                     </div>
