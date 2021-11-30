@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 
 function LoginForm() {
-    const [isRegistering, setIsRegistering] = useState(false)
+    const [isRegistering, setIsRegistering] = useState(true)
 
     const [credentials, setCredentials] = useState({
         username: "",
@@ -47,52 +47,72 @@ function LoginForm() {
     return (
         <form class="login-form">
             <h2 class="form-h2">
-            {
-            isRegistering 
-            ? "Register"
-            : "Login"
-            }
-            </h2>
-        <div class="label">
-        <label htmlFor="username">Username:</label>
-        <input 
-            type="text"
-            id="username"
-            placeholder="Enter username"
-            onChange={handleChange}
-        />
-        </div>
-        <div class="label">
-        <label htmlFor="password">Password:</label>
-        <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            onChange={handleChange}
-        />
-        {/* <input type="checkbox" onClick="myFunction()">Show Password</input> */}
-        {/* <script>
-            function myFunction() {
-                var x = document.getElementById("myInput");
-                if (x.type === "password") 
-                {
-                x.type = "text";
-                } 
-                else 
-                {
-                x.type = "password";
+                {isRegistering ? 
+                    "Register" : 
+                    "Login"
                 }
+            </h2>
+            {isRegistering && 
+                <div>
+                    <div class="label">
+                    <label htmlFor="first_name">First Name:</label>
+                    <input 
+                        type="text"
+                        id="first_name"
+                        placeholder="Hello there ???"
+                        onChange={handleChange}
+                    />
+                    </div>
+                    <div class="label">
+                    <label htmlFor="last_name">Last Name:</label>
+                    <input 
+                        type="text"
+                        id="last_name"
+                        placeholder="Hello there ???"
+                        onChange={handleChange}
+                    />
+                    </div>
+                    <div class="label">
+                    <label htmlFor="email">Email:</label>
+                    <input 
+                        type="text"
+                        id="email"
+                        placeholder="cupcake@coder.com"
+                        onChange={handleChange}
+                    />
+                    </div>
+                </div>
             }
-        </script> */}
-        </div>
-        <button type="submit" onClick={handleSubmit}>{
-            isRegistering
-            ? "Register"
-            : "Login"
-        }
-        </button>
-        <h3 class="form_h3">Not yet registered?<a onClick={() => setIsRegistering(!isRegistering)}> Click here to get started.</a>
-        </h3>
+            <div class="label">
+            <label htmlFor="username">Username:</label>
+            <input 
+                type="text"
+                id="username"
+                placeholder="Enter username"
+                onChange={handleChange}
+            />
+            </div>
+            <div class="label">
+            <label htmlFor="password">Password:</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                onChange={handleChange}
+            />
+            </div>
+            <button type="submit" onClick={handleSubmit}>{
+                isRegistering
+                ? "Register"
+                : "Login"
+            }
+            </button>
+            {isRegistering ?
+                <h3 class="form_h3">Already have an account?<a onClick={() => setIsRegistering(!isRegistering)}> Click here to login.</a>
+                </h3>
+                :
+                <h3 class="form_h3">Need an account?<a onClick={() => setIsRegistering(!isRegistering)}> Click here to sign up.</a></h3>
+            }
         </form>
     );
 }

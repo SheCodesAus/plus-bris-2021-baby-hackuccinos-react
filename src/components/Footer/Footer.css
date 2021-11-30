@@ -1,13 +1,33 @@
 .footer {
     background-color: #8246AF;
-    height: 100px;
+    height: 150px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     width: 100%;
+    padding: 20px;
 }
 
 .footer a {
     color: white;
-    padding: 40px;
+    padding: 10px;
+}
+
+.logomedia {
+    position: relative;
+    width: 30px;
+    padding: 10px;
+}
+
+.socials a {
+    padding: 0;
+}
+
+.footer-h4 {
+    color: white;
+    font-family: Raleway, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
 }

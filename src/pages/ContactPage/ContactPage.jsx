@@ -9,13 +9,10 @@ import linkedin_logo from "../../components/static file/linkedin_logo.png";
 
 function ContactPage()  {
     return (
-    <div class="contactpage">            
+    <div class="form-page">            
         <h1>Contact Us</h1>
         <p>Where you need to change your cupcakes recipe or simply you want to discuss all things cupcakes. Please contact us using the form below</p>
-        
         <ContactForm />
-        
-
     </div>
    )
 
