@@ -4,9 +4,20 @@ import "./TechPursuedRole.css";
 
 function TechPursuedRole () {
     return (
-        <div class='techpursued'>
-            <h1>This is the Tech Pursued section </h1>
-        </div>
+        <div class="row">
+        <div class="column">
+        <div class="techpursued-img">
+                <a name="techpursued-img"></a>
+                    <techpursued-img />
+                </div>
+            </div>
+            <div class="column">
+                <div class='techpursued'>
+                <a name="techpursued"></a>
+                    <techpursued />
+                </div>
+            </div>
+            </div>
     )
 }
 
