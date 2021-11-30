@@ -45,8 +45,3 @@ h3 {
     height: 30px;
 }
 
-.coders {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
