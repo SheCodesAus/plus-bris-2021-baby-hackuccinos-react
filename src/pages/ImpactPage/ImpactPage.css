@@ -24,13 +24,3 @@
     flex-basis: 100%;
     flex: 1;
   }
-  
-  .placements-img {
-    background-color: blue;
-    height: 100px;
-  }
-  
-  .placements {
-    background-color: green;
-    height: 100px;
-  }
