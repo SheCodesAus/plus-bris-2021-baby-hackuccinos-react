@@ -23,7 +23,7 @@ function App () {
           <Route exact path='/login' element={<LoginPage/>}/>
           <Route exact path='/submit' element={<RegistrationPage/>}/>
           <Route exact path='/contact' element={<ContactPage/>}/>
-          <Route component={ErrorPage}/>
+          <Route exact path='/errorpage' element={<ErrorPage/>}/>
         </Routes>
 
         <Footer />

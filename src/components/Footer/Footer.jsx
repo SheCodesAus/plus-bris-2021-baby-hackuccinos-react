@@ -11,6 +11,7 @@ function Footer() {
     return (
         <div class="footer">
             <div class="socials">
+                <h4 class="footer-h4"> Let's get social! </h4>
                 <i href="https://www.facebook.com/shecodesaustralia"><img class="logomedia" src={facebook_logo} alt="facebook_logo" /></i>
                 <a href="https://twitter.com/she_codes"><img class="logomedia" src={twitter_logo} alt="twitter_logo" /></a>
                 <a href="https://www.instagram.com/shecodesaus"><img class="logomedia" src={instagram_logo} alt="instagram_logo" /></a>

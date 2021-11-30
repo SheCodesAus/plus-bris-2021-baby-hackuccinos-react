@@ -16,7 +16,7 @@ function CoderCard(props) {
     return (
         <div>
             <div class="coder-card">
-                <Link to={`${process.env.REACT_APP_API_URL}coders/${coderData.id}`}>
+                <Link to="/errorpage">
                     <div class="card">
                         <img class="clip-me" src={coderData.image}/>
                         <div class="centered">
