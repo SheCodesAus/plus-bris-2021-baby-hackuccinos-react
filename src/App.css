@@ -22,7 +22,13 @@
   margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+.coders {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 900px) {
   #coders-list {
     display: flex;
     flex-direction: column;

@@ -25,8 +25,6 @@ function CoderSection () {
         <div class="legend">
             <img src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(30).png" alt="Enrolled badge"></img>
             <p>Enrolled</p>
-            <img src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(31).png" alt="Further She Codes learning"></img>
-            <p>Return Enrolment</p>
             <img src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(28).png" alt="Joined tech industry"></img>
             <p>Tech Career</p>
             <img src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(24).png" alt="Further learning badge"></img>
