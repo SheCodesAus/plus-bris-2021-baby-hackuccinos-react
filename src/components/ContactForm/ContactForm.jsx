@@ -36,34 +36,27 @@ function ContactForm () {
 
     return (
         <contact>
+            
+
             <div class="label">
                 <label htmlFor="name">Name</label>
                 <input
-                onChange={handleChange}
                 type="text"
-                id="current_role"
                 placeholder="Name"
-                value={coderData.current_role}
                 />
             </div>
             <div class="label">
                 <label htmlFor="Email address">Email address</label>
                 <input
-                onChange={handleChange}
                 type="text"
-                id="current_role"
                 placeholder="Email"
-                value={coderData.current_role}
                 />
             </div>
             <div class="label">
                 <label htmlFor="Phone Number">Phone Number</label>
                 <input
-                onChange={handleChange}
                 type="text"
-                id="current_role"
                 placeholder="Phone"
-                value={coderData.current_role}
                 />
             </div>
             
@@ -71,10 +64,7 @@ function ContactForm () {
                 <label htmlFor="Message">Message</label>
                 <input
                 onChange={handleChange}
-                type="text"
-                id="current_role"
                 placeholder="Message"
-                value={coderData.current_role}
                 />
             </div>
             
@@ -83,7 +73,10 @@ function ContactForm () {
             Order submitted!
             </button>
             </div>
+            
         </contact>
+
+        
 );
 }
 

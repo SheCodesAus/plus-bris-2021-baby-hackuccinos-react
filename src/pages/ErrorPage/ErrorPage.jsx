@@ -1,6 +1,5 @@
 import React, { useEffect, useState }  from "react"
 import { Link } from "react-router-dom"
-import Footer from "../../components/Footer/Footer";
 import error_pic from "../../components/static file/error_pic.png";
 import "../../App.css";  
 
