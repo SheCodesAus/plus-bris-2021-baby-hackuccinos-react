@@ -1,4 +1,9 @@
+.techpursued-img {
+    background-color: yellow;
+    height: 400px;
+}
+
 .techpursued {
-    background-color: green;
+    background-color: limegreen;
     height: 400px;
 }
