@@ -1,4 +1,4 @@
-.impactintro {
+.impact-intro {
     padding: 50px;
 
 }
@@ -6,3 +6,21 @@
     width: 100%;
     padding: 50px;
 }
+
+.impact-sections {
+    margin: 15px;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
