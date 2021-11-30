@@ -43,7 +43,14 @@ function CoderSection () {
                 feats!
             </h3>
         </div>
-        <CoderCard />
+        <div id="coders">
+            {codersList.map((CoderData, key) => {
+                if(key > 3){
+                    return;
+                }
+                return <CoderCard key={key} coderData={CoderData} />;
+            })}
+        </div>
         <div id="coder-section-button">
             <a href="/coders"><button class="coder-section-button">Meet the whole gang</button></a>
         </div>

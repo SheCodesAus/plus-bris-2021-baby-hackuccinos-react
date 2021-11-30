@@ -21,7 +21,7 @@ function LoginForm() {
 
     const postData = async () => {
         const response = await fetch(
-            `${process.env.REACT_APP_API_URL}api-token-auth/`, 
+            `${process.env.REACT_APP_API_URL}users/`, 
             {
             method: "post",
             headers: {
@@ -37,12 +37,13 @@ function LoginForm() {
         e.preventDefault();
         if (credentials.username && credentials.password) {
             postData().then((response) => {
-                console.log("This is the response",response);
-                window.localStorage.setItem("token", response.token);
+                console.log("response: ", response)
                 navigate ("/");
             });
             }
     };
+
+    console.log("credentials: ", credentials);
 
     return (
         <form class="login-form">
@@ -55,31 +56,40 @@ function LoginForm() {
             {isRegistering && 
                 <div>
                     <div class="label">
-                    <label htmlFor="first_name">First Name:</label>
-                    <input 
-                        type="text"
-                        id="first_name"
-                        placeholder="Hello there ???"
-                        onChange={handleChange}
-                    />
+                        <label htmlFor="student_id">Student ID:</label>
+                        <input 
+                            type="number"
+                            id="student_id"
+                            placeholder="12345"
+                            onChange={handleChange}
+                        />
                     </div>
                     <div class="label">
-                    <label htmlFor="last_name">Last Name:</label>
-                    <input 
-                        type="text"
-                        id="last_name"
-                        placeholder="Hello there ???"
-                        onChange={handleChange}
-                    />
+                        <label htmlFor="first_name">First Name:</label>
+                        <input 
+                            type="text"
+                            id="first_name"
+                            placeholder="Hello there ???"
+                            onChange={handleChange}
+                        />
                     </div>
                     <div class="label">
-                    <label htmlFor="email">Email:</label>
-                    <input 
-                        type="text"
-                        id="email"
-                        placeholder="cupcake@coder.com"
-                        onChange={handleChange}
-                    />
+                        <label htmlFor="last_name">Last Name:</label>
+                        <input 
+                            type="text"
+                            id="last_name"
+                            placeholder="Hello there ???"
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div class="label">
+                        <label htmlFor="email">Email:</label>
+                        <input 
+                            type="text"
+                            id="email"
+                            placeholder="cupcake@coder.com"
+                            onChange={handleChange}
+                        />
                     </div>
                 </div>
             }

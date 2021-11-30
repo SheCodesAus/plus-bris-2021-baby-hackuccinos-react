@@ -44,3 +44,9 @@ h3 {
     width: 30px;
     height: 30px;
 }
+
+.coders {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}

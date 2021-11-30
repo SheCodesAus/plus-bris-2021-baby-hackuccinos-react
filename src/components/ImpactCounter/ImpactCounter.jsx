@@ -34,10 +34,40 @@ function ImpactCounter () {
         fetch(`${process.env.REACT_APP_API_URL}coders/enrolments/`)
         .then((results) => {
             console.log("This is the no. of enrolments", results)
-        return results
+        return results.json();
         })
         .then ((data) => {
             setEnrolments(data);
+            console.log("This is the data", data)
+        });
+    },[]);
+
+    const [techJobs, setTechJobs] = useState([]);
+
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_URL}coders/techjobs/`)
+        .then((results) => {
+            console.log("This is the no. of tech jobs", results)
+        return results.json();
+        })
+        .then ((data) => {
+            setTechJobs(data);
+            console.log("This is the data", data)
+        });
+    },[]);
+
+
+    const [partnerJobs, setPartnerJobs] = useState([]);
+
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_URL}coders/partnerjobs/`)
+        .then((results) => {
+            console.log("This is the no. of partner jobs", results)
+        return results.json();
+        })
+        .then ((data) => {
+            setPartnerJobs(data);
+            console.log("This is the data", data)
         });
     },[]);
     
@@ -45,9 +75,13 @@ function ImpactCounter () {
         <div class='counter'>
             <div class="impact-circle" onclick="location.href='https://shecodes.com.au/partner-with-us/">
                 <div class="circle">
-                    <div class="number">
-                        <CountUpAnimation>4025</CountUpAnimation>
-                    </div>
+                        {
+                            enrolments.Enrolled && (
+                                <div class="number">
+                                    <CountUpAnimation>{4000+enrolments.Enrolled}</CountUpAnimation>
+                                </div>
+                            )
+                        }
                 </div>
                 <div class="impact-label">
                     <h3>Women taught</h3>
@@ -56,9 +90,13 @@ function ImpactCounter () {
             </div>
             <div class="impact-circle">
                 <div class="circle">
-                    <div class="number">
-                        <CountUpAnimation>290</CountUpAnimation>
-                    </div>
+                        {
+                            techJobs.TechJobs && (
+                                <div class="number">
+                                    <CountUpAnimation>{200+techJobs.TechJobs}</CountUpAnimation>
+                                </div>
+                            )
+                        }
                 </div>
                 <div class="impact-label">
                     <h3>Pursued tech careers</h3>
@@ -67,9 +105,13 @@ function ImpactCounter () {
             </div>
             <div class="impact-circle">
                 <div class="circle">
-                    <div class="number">
-                        <CountUpAnimation>128</CountUpAnimation>
-                    </div>
+                        { 
+                            partnerJobs.PartnersJobs && (
+                                <div class="number">
+                                    <CountUpAnimation>{100+partnerJobs.PartnersJobs}</CountUpAnimation>
+                                </div>
+                            )
+                        }
                 </div>
                 <div class="impact-label">
                     <h3>Direct hires with partners</h3>

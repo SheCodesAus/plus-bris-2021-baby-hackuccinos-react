@@ -16,53 +16,8 @@ const Nav = () => {
         setIsLoggedIn(false)
     }
 
-    // return (
-    //     <NavbarDropdown>
-    //     <NavbarDropdown.Toggle className="menu__item">
-    //         <NavbarDropdown.Open>
-    //         <FontAwesomeIcon icon={faCaretDown} fixedWidth />
-    //         </NavbarDropdown.Open>
-    //         <NavbarDropdown.Close>
-    //         <FontAwesomeIcon icon={faCaretUp} fixedWidth />
-    //         </NavbarDropdown.Close>
-    //         </NavbarDropdown.Toggle>
-    //         <NavbarDropdown.CSSTransitionMenu
-    //         className="example1-dropdown-menu"
-    //         classNames="example1-dropdown-menu"
-    //         timeout={200}
-    //         >
-    //         <NavbarDropdown.Item className="example1-dropdown-menu-item" onClick={() => alert('Item 1: clicked!')}>
-    //         <div>
-    //             <FontAwesomeIcon icon={faUser} fixedWidth />
-    //         </div>
-    //         <div className="example1-dropdown-menu-item__spacer" />
-    //         <div className="example1-dropdown-menu-item__text">Item 1</div>
-    //         </NavbarDropdown.Item>
-    //         <NavbarDropdown.Item className="example1-dropdown-menu-item" onClick={() => alert('Item 2: clicked!')}>
-    //         <div>
-    //             <FontAwesomeIcon icon={faBookmark} fixedWidth />
-    //         </div>
-    //         <div className="example1-dropdown-menu-item__spacer" />
-    //         <div className="example1-dropdown-menu-item__text">Item 2</div>
-    //         </NavbarDropdown.Item>
-    //         <NavbarDropdown.Item className="example1-dropdown-menu-item" onClick={() => alert('Item 3: clicked!')}>
-    //         <div>
-    //             <FontAwesomeIcon icon={faArchive} fixedWidth />
-    //         </div>
-    //         <div className="example1-dropdown-menu-item__spacer" />
-    //         <div className="example1-dropdown-menu-item__text">Item 3</div>
-    //         </NavbarDropdown.Item>
-    //         <NavbarDropdown.Item className="example1-dropdown-menu-item" onClick={() => alert('Item 4: clicked!')}>
-    //         <div>
-    //             <FontAwesomeIcon icon={faCog} fixedWidth />
-    //         </div>
-    //         <div className="example1-dropdown-menu-item__spacer" />
-    //         <div className="example1-dropdown-menu-item__text">Item 4</div>
-    //         </NavbarDropdown.Item>
-    //         </NavbarDropdown.CSSTransitionMenu>
-    //     </NavbarDropdown>
-    // );
-
+    console.log("isLoggedIn: ", isLoggedIn)
+   
     return (
         <nav>
             <Link to="/">Home</Link>
