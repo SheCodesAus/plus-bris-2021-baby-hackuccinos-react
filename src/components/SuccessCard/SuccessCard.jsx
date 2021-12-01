@@ -5,11 +5,18 @@ import "./SuccessCard.css";
 function SuccessCard () {
     return (
         <div class="success">
-            <h3>Cupcake Success!</h3>
-            <p>You have successfully registered your very own cupcake recipe of success. 
+            <div>
+            <h2>Cupcake Success!</h2>
+            </div>
+            <div>
+            <Link to="/"><img src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/success-cupcake-coder.png"></img></Link>
+            </div>
+            <div>
+            <p>You have successfully registered.
                 Check out our <a href="/coders">Coders Page</a> to see yourself
                 amongst your fellow tribe. Or <a href="/"> head home.</a>
             </p>
+            </div>
         </div>
     )
 }

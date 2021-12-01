@@ -39,15 +39,15 @@ const Nav = () => {
             >
             <NavbarDropdown.Item className="example1-dropdown-menu-item">
             <div className="example1-dropdown-menu-item__spacer" />
-            <Link to="/coders">Coders</Link>
+            <Link to="/coders">Coders Tribe</Link>
             </NavbarDropdown.Item>
             <NavbarDropdown.Item className="example1-dropdown-menu-item">
             <div className="example1-dropdown-menu-item__spacer" />
-            <Link to="/login">Login</Link>
+            <Link to="/login">Login/Sign Up</Link>
             </NavbarDropdown.Item>
             <NavbarDropdown.Item className="example1-dropdown-menu-item">
             <div className="example1-dropdown-menu-item__spacer" />
-            <Link to="/submit">Submit</Link>
+            <Link to="/submit">Create Profile</Link>
             </NavbarDropdown.Item>
             </NavbarDropdown.CSSTransitionMenu>
             </NavbarDropdown>

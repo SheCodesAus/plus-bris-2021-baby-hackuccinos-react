@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SubmitForm.css";
+import { Link } from "react-router-dom";
 
 function RegistrationForm () {
 
@@ -131,6 +132,9 @@ function RegistrationForm () {
             <button onClick={handleSubmit} type="submit">
             Bake my Cupcake!
             </button>
+            </div>
+            <div>
+                <Link to="/success">Success test</Link>
             </div>
         </form>
 );

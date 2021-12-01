@@ -7,6 +7,7 @@
 
 .success h2 {
     text-transform: uppercase;
+    text-align: center;
 }
 
 .success p {
@@ -15,4 +16,12 @@
     text-align: center;
     font-family: Raleway, sans-serif;
     font-size: 1.5rem;
+}
+
+.success img {
+    width: 200px;
+}
+
+.success a:hover {
+    color: orange;
 }

@@ -38,7 +38,7 @@ function LoginForm() {
         if (credentials.username && credentials.password) {
             postData().then((response) => {
                 console.log("response: ", response)
-                navigate ("/");
+                navigate ("/success-login");
             });
             }
     };

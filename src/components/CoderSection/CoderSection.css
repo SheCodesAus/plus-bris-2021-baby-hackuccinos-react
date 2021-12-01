@@ -1,3 +1,9 @@
+.coders {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
 .coder-section-main-div {
     display:flex;
     justify-content: center;
