@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
+import "../../pages/ErrorPage/ErrorPage";
 
 function LoginForm() {
     const [isRegistering, setIsRegistering] = useState(true)
@@ -9,7 +10,7 @@ function LoginForm() {
         username: "",
         password: "",
     });
-    const navigate = useNavigate();
+    let navigate = useNavigate();
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -20,26 +21,38 @@ function LoginForm() {
     };
 
     const postData = async () => {
-        const response = await fetch(
-            `${process.env.REACT_APP_API_URL}api-token-auth/`, 
-            {
-            method: "post",
-            headers: {
-                "Content-type": "application/json",
-            },
-            body: JSON.stringify(credentials),
+        try{
+            const response = await fetch(
+                `${process.env.REACT_APP_API_URL}api-token-auth/`, 
+                {
+                method: "post",
+                headers: {
+                    "Content-type": "application/json",
+                },
+                body: JSON.stringify(credentials),
+                }
+            );
+            if (response.status==404){
+                navigate('/errorpage/');
             }
-        );
-        return response.json();
+            return response.json();
+        } catch(err){
+            console.log(err)
+        }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (credentials.username && credentials.password) {
             postData().then((response) => {
+                if (!response.token) {
+                    navigate("/errorpage/")
+                  }
+                else {
                 console.log("This is the response",response);
                 window.localStorage.setItem("token", response.token);
                 navigate ("/");
+                }
             });
             }
     };

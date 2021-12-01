@@ -10,6 +10,7 @@ import Header from "./components/Header/Header";
 import ImpactPage from "./pages/ImpactPage/ImpactPage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import ScrollToTop from "./components/ScrollupButton/ScrollupButton";
 
 function App () {
   return (
@@ -25,6 +26,8 @@ function App () {
           <Route exact path='/contact' element={<ContactPage/>}/>
           <Route exact path='/errorpage' element={<ErrorPage/>}/>
         </Routes>
+
+        <ScrollToTop />
 
         <Footer />
     </Router>
