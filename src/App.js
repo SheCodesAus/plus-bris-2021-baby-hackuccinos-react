@@ -10,6 +10,7 @@ import Header from "./components/Header/Header";
 import ImpactPage from "./pages/ImpactPage/ImpactPage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import SuccessPage from "./pages/SuccessPage/SuccessPage";
 
 function App () {
   return (
@@ -24,6 +25,7 @@ function App () {
           <Route exact path='/submit' element={<RegistrationPage/>}/>
           <Route exact path='/contact' element={<ContactPage/>}/>
           <Route exact path='/errorpage' element={<ErrorPage/>}/>
+          <Route exact path="/success" element={<SuccessPage/>}/>
         </Routes>
 
         <Footer />
