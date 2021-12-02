@@ -9,6 +9,7 @@ import Partners from "../../components/Partners/Partners";
 function HomePage()  {
     return (
         <div className="home-div">
+            <a name="top"></a>
             <div class='intro'>
                 <h1>Hello there,</h1>
                 <h2>welcome to the world of our "cupcake coders"</h2>

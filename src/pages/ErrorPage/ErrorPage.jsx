@@ -14,7 +14,7 @@ function ErrorPage() {
             </div>
             <div>
                 <p>The page or resource you were looking for has not been found.</p>
-                <p><Link to="/">Make your way back to home</Link> to try again. </p>
+                <p><Link to="/#top">Make your way back to home</Link> to try again. </p>
             </div>
         </div>
     </div>

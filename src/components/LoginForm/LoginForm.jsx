@@ -111,12 +111,14 @@ function LoginForm() {
                 onChange={handleChange}
             />
             </div>
+            <div class="button-centre">
             <button type="submit" onClick={handleSubmit}>{
                 isRegistering
                 ? "Register"
                 : "Login"
             }
             </button>
+            </div>
             {isRegistering ?
                 <h3 class="form_h3">Already have an account?<a onClick={() => setIsRegistering(!isRegistering)}> Click here to login.</a>
                 </h3>

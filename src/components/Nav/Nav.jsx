@@ -20,7 +20,7 @@ const Nav = () => {
    
     return (
         <nav>
-            <Link to="/">Home</Link>
+            {/* <Link to="/">Home</Link> */}
             <Link to="/impact">Impact</Link>
             <Link to="/contact">Contact</Link>
             <NavbarDropdown>
