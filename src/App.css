@@ -186,3 +186,9 @@ button a {
   justify-content: center;
   width: 100%;
 }
+
+.scroller {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}

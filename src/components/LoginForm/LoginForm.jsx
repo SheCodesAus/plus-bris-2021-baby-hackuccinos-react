@@ -4,9 +4,13 @@ import "./LoginForm.css";
 import "../../pages/ErrorPage/ErrorPage";
 
 function LoginForm() {
-    const [isRegistering, setIsRegistering] = useState(true)
+    const [isRegistering, setIsRegistering] = useState(false)
 
     const [credentials, setCredentials] = useState({
+        student_id:"",
+        first_name:"",
+        last_name:"",
+        email:"",
         username: "",
         password: "",
     });
@@ -23,7 +27,8 @@ function LoginForm() {
     const postData = async () => {
 
         const response = await fetch(
-            `${process.env.REACT_APP_API_URL}${isRegistering ? "users" : "api-auth"}/`, 
+            // `${process.env.REACT_APP_API_URL}users/`,
+            `${process.env.REACT_APP_API_URL}${isRegistering ? "users" : "api-token-auth"}/`, 
             {
             method: "post",
             headers: {
@@ -31,10 +36,8 @@ function LoginForm() {
             },
             body: JSON.stringify(credentials),
             }
-            return response.json();
-        } catch(err){
-            console.log(err)
-        }
+        );
+        return(response.json());
     };
 
     const handleSubmit = (e) => {
@@ -77,7 +80,7 @@ function LoginForm() {
                         <input 
                             type="text"
                             id="first_name"
-                            placeholder="Hello there ???"
+                            placeholder="Please enter your first name"
                             onChange={handleChange}
                         />
                     </div>
@@ -86,7 +89,7 @@ function LoginForm() {
                         <input 
                             type="text"
                             id="last_name"
-                            placeholder="Hello there ???"
+                            placeholder="Please enter my first name"
                             onChange={handleChange}
                         />
                     </div>

@@ -6,9 +6,6 @@ function SuccessLogin () {
     return (
         <div class="success">
             <div>
-            <   h1>Success!</h1>
-            </div>
-            <div>
                 <h2>Login Success!</h2>
             </div>
             <div>
