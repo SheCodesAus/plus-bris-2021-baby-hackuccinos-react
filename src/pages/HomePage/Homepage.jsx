@@ -4,11 +4,12 @@ import CoderSection from "../../components/CoderSection/CoderSection";
 import Header from "../../components/Header/Header";
 import ImpactCounter from "../../components/ImpactCounter/ImpactCounter";
 import "./Homepage.css";  
-import Footer from "../../components/Footer/Footer";
+import Partners from "../../components/Partners/Partners";
 
 function HomePage()  {
     return (
         <div className="home-div">
+            <a name="top"></a>
             <div class='intro'>
                 <h1>Hello there,</h1>
                 <h2>welcome to the world of our "cupcake coders"</h2>
@@ -25,12 +26,15 @@ function HomePage()  {
             <div class="intro">
             <h1>Who we work with,</h1>
                 <h2>to make the magic happen for our "cupcake coders"</h2>
-                <p>Our events are free thanks to the support of these organisations.
+                <p> Our events are free thanks to the support of these organisations.
                     Our partners pave the way for our She Codes cupcake Coders 
                     to take on a tech role and begin their new careers.  
                     If you are interested in partnering with She Codes <a href="https://shecodes.com.au/partner-with-us/">find out more here.</a> 
                 </p>
-                <a href="https://shecodes.com.au/partner-with-us/"><img id="partners" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Partners.png"/></a>
+            </div>
+            <div>
+                <Partners />
+                {/* <a href="https://shecodes.com.au/partner-with-us/"><img id="partners" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Partners.png"/></a> */}
             </div>
         </div>
     )

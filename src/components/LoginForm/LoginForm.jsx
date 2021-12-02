@@ -21,19 +21,15 @@ function LoginForm() {
     };
 
     const postData = async () => {
-        try{
-            const response = await fetch(
-                `${process.env.REACT_APP_API_URL}api-token-auth/`, 
-                {
-                method: "post",
-                headers: {
-                    "Content-type": "application/json",
-                },
-                body: JSON.stringify(credentials),
-                }
-            );
-            if (response.status==404){
-                navigate('/errorpage/');
+
+        const response = await fetch(
+            `${process.env.REACT_APP_API_URL}${isRegistering ? "users" : "api-auth"}/`, 
+            {
+            method: "post",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(credentials),
             }
             return response.json();
         } catch(err){
@@ -45,17 +41,17 @@ function LoginForm() {
         e.preventDefault();
         if (credentials.username && credentials.password) {
             postData().then((response) => {
-                if (!response.token) {
-                    navigate("/errorpage/")
-                  }
-                else {
-                console.log("This is the response",response);
-                window.localStorage.setItem("token", response.token);
-                navigate ("/");
-                }
-            });
+
+                console.log("response: ", response.ok)
+                navigate("/success-login");
+            }).catch((error) => {
+                console.log("error:", error)
+                navigate("/errorpage");
+            })
             }
     };
+
+    console.log("credentials: ", credentials);
 
     return (
         <form class="login-form">
@@ -68,31 +64,40 @@ function LoginForm() {
             {isRegistering && 
                 <div>
                     <div class="label">
-                    <label htmlFor="first_name">First Name:</label>
-                    <input 
-                        type="text"
-                        id="first_name"
-                        placeholder="Hello there ???"
-                        onChange={handleChange}
-                    />
+                        <label htmlFor="student_id">Student ID:</label>
+                        <input 
+                            type="number"
+                            id="student_id"
+                            placeholder="12345"
+                            onChange={handleChange}
+                        />
                     </div>
                     <div class="label">
-                    <label htmlFor="last_name">Last Name:</label>
-                    <input 
-                        type="text"
-                        id="last_name"
-                        placeholder="Hello there ???"
-                        onChange={handleChange}
-                    />
+                        <label htmlFor="first_name">First Name:</label>
+                        <input 
+                            type="text"
+                            id="first_name"
+                            placeholder="Hello there ???"
+                            onChange={handleChange}
+                        />
                     </div>
                     <div class="label">
-                    <label htmlFor="email">Email:</label>
-                    <input 
-                        type="text"
-                        id="email"
-                        placeholder="cupcake@coder.com"
-                        onChange={handleChange}
-                    />
+                        <label htmlFor="last_name">Last Name:</label>
+                        <input 
+                            type="text"
+                            id="last_name"
+                            placeholder="Hello there ???"
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div class="label">
+                        <label htmlFor="email">Email:</label>
+                        <input 
+                            type="text"
+                            id="email"
+                            placeholder="cupcake@coder.com"
+                            onChange={handleChange}
+                        />
                     </div>
                 </div>
             }
@@ -114,12 +119,14 @@ function LoginForm() {
                 onChange={handleChange}
             />
             </div>
+            <div class="button-centre">
             <button type="submit" onClick={handleSubmit}>{
                 isRegistering
                 ? "Register"
                 : "Login"
             }
             </button>
+            </div>
             {isRegistering ?
                 <h3 class="form_h3">Already have an account?<a onClick={() => setIsRegistering(!isRegistering)}> Click here to login.</a>
                 </h3>

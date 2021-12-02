@@ -12,18 +12,32 @@
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+}
+
 #coders-list {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  column-gap: 60px;
-  row-gap: 60px;
-  margin-top: 50px;
+  grid-template-columns: 23% 23% 23% 23%;
+  column-gap: 30px;
+  row-gap: 40px;
+  margin-top: 10px;
   padding: 0px;
   margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+#coders {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 900px) {
   #coders-list {
+    display: flex;
+    flex-direction: column;
+  }
+  #coders {
     display: flex;
     flex-direction: column;
   }
@@ -67,10 +81,6 @@ body {
   margin-top: 2rem;
 }
 
-.dare-page button {
-  width: 30%;
-}
-
 
 h1 {
   color: black;
@@ -109,6 +119,7 @@ button {
   display: flex;
   justify-content: center;
   height: auto;
+  width: 100%;
   font-size: 1.25rem;
   font-family: raleway, sans-serif;
   font-weight: 700;
@@ -168,4 +179,10 @@ button a {
   width: 2%;
 
   
+}
+
+.button-centre {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

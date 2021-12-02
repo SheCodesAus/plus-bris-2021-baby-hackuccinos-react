@@ -11,6 +11,7 @@ function ContactPage()  {
     return (
     <div class="form-page">            
         <h1>Contact Us</h1>
+        <h2>we'd love to hear from you!</h2>
         <p>Where you need to change your cupcakes recipe or simply you want to discuss all things cupcakes. Please contact us using the form below</p>
         <ContactForm />
     </div>
