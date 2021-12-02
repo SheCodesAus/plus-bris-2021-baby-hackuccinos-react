@@ -169,3 +169,22 @@ button a {
 
   
 }
+
+.impact-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.impact-row img {
+  padding: 20px;
+}
+
+.impact-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
