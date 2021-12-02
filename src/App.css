@@ -12,6 +12,10 @@
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+}
+
 #coders-list {
   display: grid;
   grid-template-columns: 23% 23% 23% 23%;

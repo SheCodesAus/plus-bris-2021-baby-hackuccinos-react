@@ -74,7 +74,8 @@ function ImpactCounter () {
     return (
         <div class='counter'>
             <div class="impact-circle" onclick="location.href='https://shecodes.com.au/partner-with-us/">
-                <div class="circle">
+                <Link to="/impact#enrolments">
+                    <div class="circle">
                         {
                             enrolments.Enrolled && (
                                 <div class="number">
@@ -83,6 +84,7 @@ function ImpactCounter () {
                             )
                         }
                 </div>
+                </Link>
                 <div class="impact-label">
                     <h3>Women taught</h3>
                     <Link to="/impact#enrolments">find out more</Link>

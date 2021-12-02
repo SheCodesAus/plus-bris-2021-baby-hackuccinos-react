@@ -21,7 +21,7 @@ function LoginForm() {
 
     const postData = async () => {
         const response = await fetch(
-            `${process.env.REACT_APP_API_URL}users/`, 
+            `${process.env.REACT_APP_API_URL}${isRegistering ? "users" : "api-auth"}/`, 
             {
             method: "post",
             headers: {
@@ -37,9 +37,12 @@ function LoginForm() {
         e.preventDefault();
         if (credentials.username && credentials.password) {
             postData().then((response) => {
-                console.log("response: ", response)
-                navigate ("/success-login");
-            });
+                console.log("response: ", response.ok)
+                navigate("/success-login");
+            }).catch((error) => {
+                console.log("error:", error)
+                navigate("/errorpage");
+            })
             }
     };
 
