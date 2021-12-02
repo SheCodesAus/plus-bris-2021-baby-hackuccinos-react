@@ -16,11 +16,11 @@ function CoderCard(props) {
     return (
         <div>
             <div class="coder-card">
-                <Link to={`${process.env.REACT_APP_API_URL}coders/${coderData.id}`}>
+                <Link to="/errorpage">
                     <div class="card">
                         <img class="clip-me" src={coderData.image}/>
                         <div class="centered">
-                            {coderData.first_name}{coderData.last_name}
+                            <h3 class="centered">ID no. {coderData.student_ID} of {coderData.programs_complete}</h3>
                         </div>
                         <div class="badge-row">
                         {

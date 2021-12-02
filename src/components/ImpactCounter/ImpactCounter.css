@@ -41,11 +41,12 @@
     font-family: Raleway, sans-serif;
 }
 
-.number h2 {
+.number {
     font-size: 100px;
     font-weight: 300;
     align-items: center;
     color: black;
+    font-family: Raleway, sans-serif;
 }
 
 .impact-circle {
@@ -55,3 +56,14 @@
     justify-content: center;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .counter {
+      display: flex;
+      flex-direction: column;
+    }
+    .legend {
+        display: flex;
+        flex-direction: column; 
+    }
+  }
