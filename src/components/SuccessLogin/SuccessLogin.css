@@ -1,0 +1,27 @@
+.success {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.success p {
+    border: none;
+    justify-content: center;
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    font-size: 1.5rem;
+}
+
+.success img {
+    width: 200px;
+}
+
+.success a:hover {
+    color: orange;
+}

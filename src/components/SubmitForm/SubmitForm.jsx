@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SubmitForm.css";
+import { Link } from "react-router-dom";
 
 function RegistrationForm () {
 
@@ -32,34 +33,25 @@ function RegistrationForm () {
             body: JSON.stringify(coderData),
             }
         );
+
+        console.log("Found response: ", response)
+    	if (response.status==404) {
+      		navigate("/errorpage")
+    	};
+    	return response.json();
+        
     }
 
     return (
         <form>
             <h2 class="form_h2">Your Cupcake Recipe</h2>
             <div class="label">
-            <label htmlFor="student_id">Student ID:</label>
-            <input 
-                onChange={handleChange}
-                type="text"
-                id="student_id"
-                placeholder="Your secret Cupcake Coder Code."
-                value={coderData.student_id}
-            /></div>
-            <div class="label">
-                <p class="form-p">Click on the "Choose File" button to upload your amazing headshot:</p>
-                {/* <form action="/action_page.php"> */}
-                <input type="file" id="myFile" name="filename"/>
-                {/* <input type="submit"/> */}
-                {/* </form> */}
-            </div>
-            <div class="label">
-                <label htmlFor="image">Enter URL for your headshot image:</label>
+                <label htmlFor="image">Let's start with a lovely photo of yourself.</label>
                 <input
                 onChange={handleChange}
                 type="url"
                 id="image"
-                placeholder="Enter URL for image"
+                placeholder="Please enter URL for your headshot image."
                 value={coderData.image}
                 />
             </div>
@@ -147,6 +139,9 @@ function RegistrationForm () {
             <button onClick={handleSubmit} type="submit">
             Bake my Cupcake!
             </button>
+            </div>
+            <div>
+                <Link to="/success">Success test</Link>
             </div>
         </form>
 );

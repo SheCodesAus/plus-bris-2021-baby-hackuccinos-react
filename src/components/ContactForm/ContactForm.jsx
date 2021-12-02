@@ -27,7 +27,7 @@ function ContactForm () {
 
                     <div class="label_checkbox">
                         <input type="checkbox" id="checkboxInput"/>
-                        <label for="checkboxInput">Tick the box if you want to subscribe our newsletter</label>
+                        <label for="checkboxInput">Please tick if you'd like to subscribe to our delicious cupcake coder newsletter</label>
                     </div>
 
         </form>
