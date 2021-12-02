@@ -10,8 +10,8 @@ function ImpactPage() {
     return (
             <div class="impact-div">
             <div class="impact-intro">
-            <h1>Showcasing our Impact! </h1>
-                <h2>Our mission is to create lasting impact on the tech 
+                <h1>Showcasing our Impact! </h1>
+                    <h2>Our mission is to create lasting impact on the tech 
                     industry throughout Australia and inspire 100,000 women to enter tech by 2025.</h2>
                 <p>For more information, or to download our lastest impact report <a href="https://shecodes.com.au/impact-report/">click here.</a></p>
             </div>
