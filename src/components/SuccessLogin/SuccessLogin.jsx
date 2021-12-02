@@ -12,9 +12,9 @@ function SuccessLogin () {
                 <Link to="/"><img src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/success-cupcake-coder.png"></img></Link>
             </div>
             <div>
-                <p>You have successfully logged in. 
-                Create your new cupcake coder profile <a href="/submit">using this form here</a>. 
-                Or <a href="/impact"> explore coder impact here</a>
+                <p>You have been successful! 
+                Check out <Link to="/coders">coders here.</Link>
+                Or <Link to="/impact"> explore coder impact here</Link>
                 </p>
             </div>
         </div>

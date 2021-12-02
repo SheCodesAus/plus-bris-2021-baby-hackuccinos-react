@@ -50,7 +50,7 @@ function CoderSection () {
             })}
         </div>
         <div id="coder-section-button">
-            <Link class="coder-section-button" to="/coders">
+            <Link class="coder-section-button" to="/coders#top">
                 <button>Meet the whole gang</button>
             </Link>
         </div>
