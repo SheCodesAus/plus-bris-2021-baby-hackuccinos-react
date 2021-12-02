@@ -177,8 +177,6 @@ button a {
   padding-bottom: 5px;
   padding-right: 10px;
   width: 2%;
-
-  
 }
 
 
@@ -192,6 +190,7 @@ button a {
   width: 75px;
   height: 75px;
   object-fit: contain;
+}
 
 .impact-row {
   display: flex;

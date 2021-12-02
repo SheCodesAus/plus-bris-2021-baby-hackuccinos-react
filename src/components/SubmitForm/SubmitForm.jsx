@@ -7,6 +7,7 @@ function RegistrationForm () {
 
     const [coderData, setCoderData] = useState({});
     const navigate = useNavigate();
+    const token = window.localStorage.getItem("token")
 
     const handleChange = (e) => {
         let { id, value } = e.target;
@@ -17,10 +18,7 @@ function RegistrationForm () {
 
     };
 
-
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-
+    const postData = async () => {
 
         const response = await fetch(
             `${process.env.REACT_APP_API_URL}coders/`, 
@@ -33,13 +31,20 @@ function RegistrationForm () {
             body: JSON.stringify(coderData),
             }
         );
+        return(response.json());
+    };
 
-        console.log("Found response: ", response)
-    	if (response.status==404) {
-      		navigate("/errorpage")
-    	};
-    	return response.json();
-        
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        if (window.localStorage.getItem("token")) {
+            postData().then((response) => {
+                console.log("response: ", response.ok)
+                navigate("/success-card");
+            }).catch((error) => {
+                console.log("error:", error)
+                navigate("/errorpage");
+            })
+            };
     }
 
     return (
