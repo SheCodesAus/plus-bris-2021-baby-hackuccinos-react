@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
+import "../../pages/ErrorPage/ErrorPage";
 
 function LoginForm() {
     const [isRegistering, setIsRegistering] = useState(true)
@@ -9,7 +10,7 @@ function LoginForm() {
         username: "",
         password: "",
     });
-    const navigate = useNavigate();
+    let navigate = useNavigate();
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -20,6 +21,7 @@ function LoginForm() {
     };
 
     const postData = async () => {
+
         const response = await fetch(
             `${process.env.REACT_APP_API_URL}${isRegistering ? "users" : "api-auth"}/`, 
             {
@@ -29,14 +31,17 @@ function LoginForm() {
             },
             body: JSON.stringify(credentials),
             }
-        );
-        return response.json();
+            return response.json();
+        } catch(err){
+            console.log(err)
+        }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (credentials.username && credentials.password) {
             postData().then((response) => {
+
                 console.log("response: ", response.ok)
                 navigate("/success-login");
             }).catch((error) => {

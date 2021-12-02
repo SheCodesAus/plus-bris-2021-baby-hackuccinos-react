@@ -33,6 +33,13 @@ function RegistrationForm () {
             body: JSON.stringify(coderData),
             }
         );
+
+        console.log("Found response: ", response)
+    	if (response.status==404) {
+      		navigate("/errorpage")
+    	};
+    	return response.json();
+        
     }
 
     return (
