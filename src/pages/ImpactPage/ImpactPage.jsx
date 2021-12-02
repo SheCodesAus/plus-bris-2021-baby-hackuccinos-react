@@ -14,6 +14,7 @@ function ImpactPage() {
                 <h2>welcome to the world of our "cupcake coders"</h2>
                 <p>Insert text here <a href="https://shecodes.com.au/impact-report/">find out more here.</a></p>
             </div>
+<<<<<<< Updated upstream
             <div class="impact-sections">
                 <Placements/>
             </div>
@@ -23,6 +24,8 @@ function ImpactPage() {
             <div class="techpursued">
                 <TechPursuedRole/>
             </div>
+=======
+>>>>>>> Stashed changes
     </div>
     )
 }
