@@ -1,14 +1,16 @@
 import React from "react";
 import "./Enrolments.css";
+import enrolments from "../../components/static file/enrolments.jpeg";
 
 function Enrolments () {
     return (
         <div class="intro">
+            <h1>Enrolments</h1>     
             <div class="impact-row">
-                <p>To date, 128 have been placed into careers with technology partner as a direct result of women completing she codes courses. </p>
-                <a href="/"><img src="https://i.insider.com/5484d9d1eab8ea3017b17e29?width=600&format=jpeg&auto=webp"/></a>
+                <p>In the last 5 years, She Codes is proud to have taught 4025 women across Australia in a variation of languages: HTML, CSS, Wordpress, Python and Django. To find out more about courses She Codes provides <a href="https://shecodes.com.au/learn/"> click here.</a> </p>
+                <img className="impact-img" src={enrolments} alt="Enrolments"/>
             </div>
-        </div>
+            </div>
     )
 }
 

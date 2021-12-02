@@ -1,13 +1,13 @@
 .impact-intro {
-    padding: 50px;
+    padding: 10px 50px 10px 50px;
 
 }
 .impact-div {
     width: 100%;
-    padding: 50px;
 }
 
-.impact-sections {
-    margin: 15px;
+.impact-img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
   }
-  
