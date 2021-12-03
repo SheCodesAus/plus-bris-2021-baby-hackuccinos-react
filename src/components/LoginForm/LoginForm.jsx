@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 import "../../pages/ErrorPage/ErrorPage";
-
 function LoginForm() {
   const [isRegistering, setIsRegistering] = useState(false);
-
   const [credentials, setCredentials] = useState({
     student_id: "",
     first_name: "",
@@ -15,7 +13,6 @@ function LoginForm() {
     password: "",
   });
   let navigate = useNavigate();
-
   const handleChange = (e) => {
     const { id, value } = e.target;
     setCredentials((prevCredentials) => ({
@@ -23,7 +20,6 @@ function LoginForm() {
       [id]: value,
     }));
   };
-
   const postData = async () => {
     const response = await fetch(
       // `${process.env.REACT_APP_API_URL}users/`,
@@ -40,7 +36,6 @@ function LoginForm() {
     );
     return response.json();
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (credentials.username && credentials.password) {
@@ -55,9 +50,7 @@ function LoginForm() {
       // });
     }
   };
-
   console.log("credentials: ", credentials);
-
   return (
     <form class="login-form">
       <h2 class="form-h2">{isRegistering ? "Register" : "Login"}</h2>
@@ -144,5 +137,4 @@ function LoginForm() {
     </form>
   );
 }
-
 export default LoginForm;
