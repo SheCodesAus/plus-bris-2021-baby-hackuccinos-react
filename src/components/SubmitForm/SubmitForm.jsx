@@ -43,7 +43,7 @@ function RegistrationForm() {
     e.preventDefault();
     // if (window.localStorage.getItem("token")) {
     postData().then((response) => {
-      navigate("/coders");
+      navigate("/success");
     });
   };
 
