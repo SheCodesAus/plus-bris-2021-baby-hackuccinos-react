@@ -92,7 +92,7 @@ function ImpactCounter() {
         </div>
       </div>
       <div class="impact-circle">
-      <Link to="/impact#enrolments">
+      <Link to="/impact#techpursuedrole">
         <div class="circle">
           {techJobs.TechJobs && (
             <div class="number">

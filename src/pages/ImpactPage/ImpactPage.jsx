@@ -18,10 +18,14 @@ function ImpactPage() {
             <div>
             <a name="enrolments"></a>
             <Enrolments />
+            <div>
             <a name="placements"></a>
             <Placements />
+            </div>
+            <div>
             <a name="techpursuedrole"></a>
             <TechPursuedRole />
+            </div>
         </div>
     </div>
     )
