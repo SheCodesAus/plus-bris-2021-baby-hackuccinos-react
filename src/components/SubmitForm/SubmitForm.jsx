@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SubmitForm.css";
 import { Link } from "react-router-dom";
+
 function RegistrationForm() {
   const navigate = useNavigate();
   //   const token = window.localStorage.getItem("token");
@@ -16,40 +17,38 @@ function RegistrationForm() {
     partner_hire: "",
     post_study: "",
   });
+
   const handleChange = (e) => {
-    let { id, value } = e.target;
+    const { id, value } = e.target;
     setCoderData((prevCoderData) => ({
       ...prevCoderData,
       [id]: value,
     }));
   };
+
   const postData = async () => {
+    const token = window.localStorage.getItem("token");
     const response = await fetch(`${process.env.REACT_APP_API_URL}coders/`, {
       method: "post",
       headers: {
-        Authorization: `Token ${localStorage.getItem("token")}`,
+        Authorization: `Token ${token}`,
         "Content-type": "application/json",
       },
       body: JSON.stringify(coderData),
     });
     return response.json();
   };
-  const handleSubmit = async (e) => {
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (window.localStorage.getItem("token")) {
-      postData()
-        .then((response) => {
-          console.log("response: ", response.ok);
-          navigate("/success-card");
-        })
-        .catch((error) => {
-          console.log("error:", error);
-          navigate("/errorpage");
-        });
-    }
+    // if (window.localStorage.getItem("token")) {
+    postData().then((response) => {
+      navigate("/coders");
+    });
   };
+
   return (
-    <form>
+    <form className="submit" onSubmit={handleSubmit}>
       <h2 class="form_h2">Your Cupcake Recipe</h2>
       <div class="label">
         <label htmlFor="image">
@@ -161,10 +160,11 @@ function RegistrationForm() {
           Bake my Cupcake!
         </button>
       </div>
-      <div>
+      {/* <div>
         <Link to="/success">Success test</Link>
-      </div>
+      </div> */}
     </form>
   );
 }
+
 export default RegistrationForm;
