@@ -6,5 +6,35 @@
     height: 50px;
 }
 
+.title-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.main-enrol {
+    background-color: #ffa300;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    padding: 50px;
+}
+
+.main-enrol h1 {
+    color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-enrol {
+      flex-direction: column;
+    }
+}
+
+.section-button {
+    background-color: turquoise;
+    color: white;
+    width: 30%;
+}
 
 
