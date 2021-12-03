@@ -19,6 +19,7 @@ function CodersPage() {
 
         return (
             <div className="home-div">
+                <a name="top"></a>
                 <div className="intro">
                     <h1>Cupcake coders unite!</h1>
                     <h2>Say hello to all of our wonderful cupcake coders!</h2>
