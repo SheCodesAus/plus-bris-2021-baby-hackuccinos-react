@@ -6,14 +6,7 @@ import "../../pages/ErrorPage/ErrorPage";
 const LoginForm = () => {
   const navigate = useNavigate();
   const [isRegistering, setIsRegistering] = useState(false);
-  const [credentials, setCredentials] = useState({
-    // student_id: "",
-    // first_name: "",
-    // last_name: "",
-    // email: "",
-    username: "",
-    password: "",
-  });
+  const [credentials, setCredentials] = useState({});
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -25,10 +18,8 @@ const LoginForm = () => {
 
   const postData = async () => {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}api-token-auth/`,
-      // `${process.env.REACT_APP_API_URL}${
-      //   isRegistering ? "users" : "api-token-auth"
-      // }/`,
+      `${process.env.REACT_APP_API_URL}${ isRegistering ? "users" : "api-token-auth"}/`,
+
       {
         method: "post",
         headers: {
@@ -45,7 +36,7 @@ const LoginForm = () => {
     if (credentials.username && credentials.password) {
       postData().then((response) => {
         window.localStorage.setItem("token", response.token);
-        //   console.log("response: ", response.ok);
+          console.log("response: ", response.ok);
         navigate("/success-login");
       });
       // .catch((error) => {

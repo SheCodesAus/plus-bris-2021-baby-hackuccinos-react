@@ -92,6 +92,7 @@ function ImpactCounter() {
         </div>
       </div>
       <div class="impact-circle">
+      <Link to="/impact#enrolments">
         <div class="circle">
           {techJobs.TechJobs && (
             <div class="number">
@@ -99,12 +100,14 @@ function ImpactCounter() {
             </div>
           )}
         </div>
+        </Link>
         <div class="impact-label">
           <h3>Pursued tech careers</h3>
-          <a href="#techpursuedrole">find out more</a>
+          <a href="impact/#techpursuedrole">find out more</a>
         </div>
       </div>
       <div class="impact-circle">
+      <Link to="/impact#placements">
         <div class="circle">
           {partnerJobs.PartnersJobs && (
             <div class="number">
@@ -114,9 +117,10 @@ function ImpactCounter() {
             </div>
           )}
         </div>
+        </Link>
         <div class="impact-label">
           <h3>Direct hires with partners</h3>
-          <a href="#placements">find out more</a>
+          <a href="impact/#placements">find out more</a>
         </div>
       </div>
     </div>
