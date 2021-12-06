@@ -6,7 +6,12 @@ import "../../pages/ErrorPage/ErrorPage";
 const LoginForm = () => {
   const navigate = useNavigate();
   const [isRegistering, setIsRegistering] = useState(false);
-  const [credentials, setCredentials] = useState({});
+  const [credentials, setCredentials] = useState({
+    username:"",
+    password:"",
+  });
+  const [error, setError] = useState(false)
+
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -34,18 +39,23 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (credentials.username && credentials.password) {
-      postData().then((response) => {
-        window.localStorage.setItem("token", response.token);
-          console.log("response: ", response.ok);
-        navigate("/success-login");
-      });
-      // .catch((error) => {
-      //   console.log("error:", error);
-      //   navigate("/errorpage");
-      // });
+      postData()
+        .then((response) => {
+          if (response.token) {
+            setError(false)
+            window.localStorage.setItem("token", response.token);
+            window.localStorage.setItem("username", credentials.username);
+            window.location = `${window.location.origin}/`
+            navigate("/success-login");
+          } else {
+            setError(true)
+          }
+        })
     }
+    else {
+      setError(true)
+    }     
   };
-  // console.log("credentials: ", credentials);
 
   return (
     <form class="login-form">
@@ -108,6 +118,9 @@ const LoginForm = () => {
           onChange={handleChange}
         />
       </div>
+      {
+          error && <div style={{ color: `white`, textAlign: `left`, marginBottom: `1em`, marginTop: '1em' }}>Wrong username/password. Please try again.</div>
+      }
       <div class="button-centre">
         <button type="submit" onClick={handleSubmit}>
           {isRegistering ? "Register" : "Login"}
