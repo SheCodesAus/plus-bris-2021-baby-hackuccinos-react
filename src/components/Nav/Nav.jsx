@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavbarDropdown from "react-navbar-dropdown";
-import {
-  faCaretUp,
-  faCaretDown,
-  faBookmark,
-  faUser,
-  faArchive,
-  faCog,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCaretUp,faCaretDown, } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -21,9 +14,10 @@ const Nav = () => {
   const logout = () => {
     localStorage.clear();
     setIsLoggedIn(false);
+    navigate.push('/');
   };
 
-  console.log("isLoggedIn: ", isLoggedIn);
+  const navigate = useNavigate();
 
   return (
     <nav>
@@ -51,17 +45,21 @@ const Nav = () => {
           </NavbarDropdown.Item>
           <NavbarDropdown.Item className="example1-dropdown-menu-item">
             <div className="example1-dropdown-menu-item__spacer" />
+            {!isLoggedIn && (
             <Link to="/login">Login/Sign Up</Link>
+            )}
+            {isLoggedIn && (
+            <Link onClick={logout} to="/">Logout</Link>
+            )}
           </NavbarDropdown.Item>
+          {isLoggedIn && (
           <NavbarDropdown.Item className="example1-dropdown-menu-item">
             <div className="example1-dropdown-menu-item__spacer" />
             <Link to="/submit">Create Profile</Link>
           </NavbarDropdown.Item>
+          )}
         </NavbarDropdown.CSSTransitionMenu>
       </NavbarDropdown>
-      {/* <Link to="/coders">Coders</Link>
-      <Link to="/login">Login</Link>
-      <Link to="/submit">Submit</Link> */}
     </nav>
   );
 };

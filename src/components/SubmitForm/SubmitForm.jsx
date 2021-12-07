@@ -1,22 +1,32 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SubmitForm.css";
 import { Link } from "react-router-dom";
 
+const formReducer = (state, event) => {
+  return {
+    ...state,
+    [event.name]: event.value
+  }
+}
+
 function RegistrationForm() {
+  const [formData, setFormData] = useReducer(formReducer, {});
   const navigate = useNavigate();
   //   const token = window.localStorage.getItem("token");
   const [coderData, setCoderData] = useState({
     image: "",
     current_role: "",
-    tech_industry: "",
+    tech_industry: Boolean,
     programs_complete: "",
     programs_interested: "",
     location: "",
     mentoring: "",
-    partner_hire: "",
-    post_study: "",
+    partner_hire: Boolean,
+    post_study: Boolean,
   });
+
+  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -41,15 +51,32 @@ function RegistrationForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (window.localStorage.getItem("token")) {
-    postData().then((response) => {
-      navigate("/success");
+    setSubmitting(true);
+
+    setTimeout(() => {
+    setSubmitting(false);
+    }, 3000)
+
+    postData()
+      .then((response) => {
+        console.log('Congrats! New user created.')
+        navigate("/success");
     });
   };
 
   return (
-    <form className="submit" onSubmit={handleSubmit}>
+    <form className="submit" onChange={setFormData} onSubmit={handleSubmit}>
       <h2 class="form_h2">Your Cupcake Recipe</h2>
+        {/* {submitting && 
+        <div>
+        <h2 class="form_h2">You are submitting the following:</h2>
+          <ul>
+            {Object.entries(formData).map(([name, value]) => (
+              <li key={name}><strong>{name}</strong>:{value}</li>
+            ))}
+          </ul>
+        </div>
+        } */}
       <div class="label">
         <label htmlFor="image">
           Let's start with a lovely photo of yourself.
@@ -70,18 +97,6 @@ function RegistrationForm() {
           id="current_role"
           placeholder="Cupcake Coder and..."
           value={coderData.current_role}
-        />
-      </div>
-      <div class="label">
-        <label htmlFor="tech_industry">
-          You're in the tech industry True or False?
-        </label>
-        <input
-          onChange={handleChange}
-          type="boolean"
-          id="tech_industry"
-          placeholder="Please write True or False"
-          value={coderData.tech_industry}
         />
       </div>
       <div class="label">
@@ -131,6 +146,18 @@ function RegistrationForm() {
         />
       </div>
       <div class="label">
+        <label htmlFor="tech_industry">
+          Working in the tech industry? true or false?
+        </label>
+        <input
+          onChange={handleChange}
+          ype="text"
+          id="tech_industry"
+          placeholder="Please write true or false only"
+          value={coderData.tech_industry}
+        />
+      </div>
+      <div class="label">
         <label htmlFor="partner_hire">
           Have you secured a position with a program partner? If yes, who did
           you join?
@@ -139,7 +166,7 @@ function RegistrationForm() {
           onChange={handleChange}
           type="text"
           id="partner_hire"
-          placeholder="Landed a role with BHP!"
+          placeholder="Please write true or false only"
           value={coderData.partner_hire}
         />
       </div>
@@ -151,15 +178,18 @@ function RegistrationForm() {
           onChange={handleChange}
           type="text"
           id="post_study"
-          placeholder="Please write True or False"
+          placeholder="Please write true or false only"
           value={coderData.post_study}
         />
       </div>
       <div className="button-centre">
-        <button onClick={handleSubmit} type="submit">
+        <button onClick={handleSubmit} type="submit" disabled={submitting}>
           Bake my Cupcake!
         </button>
       </div>
+      {submitting &&
+        <div style={{ color: `white`, textAlign: `left`, marginBottom: `1em`, marginTop: '1em' }}>Baking your cupcake in our coders oven...</div>
+      }
       {/* <div>
         <Link to="/success">Success test</Link>
       </div> */}
