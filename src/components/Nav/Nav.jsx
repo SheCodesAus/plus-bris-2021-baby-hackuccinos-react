@@ -43,6 +43,12 @@ const Nav = () => {
             <div className="example1-dropdown-menu-item__spacer" />
             <Link to="/coders">Coders Tribe</Link>
           </NavbarDropdown.Item>
+          {isLoggedIn && (
+          <NavbarDropdown.Item className="example1-dropdown-menu-item">
+            <div className="example1-dropdown-menu-item__spacer" />
+            <Link to="/submit">Create Profile</Link>
+          </NavbarDropdown.Item>
+          )}
           <NavbarDropdown.Item className="example1-dropdown-menu-item">
             <div className="example1-dropdown-menu-item__spacer" />
             {!isLoggedIn && (
@@ -52,12 +58,6 @@ const Nav = () => {
             <Link onClick={logout} to="/">Logout</Link>
             )}
           </NavbarDropdown.Item>
-          {isLoggedIn && (
-          <NavbarDropdown.Item className="example1-dropdown-menu-item">
-            <div className="example1-dropdown-menu-item__spacer" />
-            <Link to="/submit">Create Profile</Link>
-          </NavbarDropdown.Item>
-          )}
         </NavbarDropdown.CSSTransitionMenu>
       </NavbarDropdown>
     </nav>

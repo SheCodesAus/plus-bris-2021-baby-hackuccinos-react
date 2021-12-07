@@ -19,9 +19,7 @@ function TechPursuedRole() {
           </p>
         </div>
         <div id="button-div">
-          <a href mailto="katebushell@shecodes.com.au">
-            <button class="section-button">Get in touch</button>
-          </a>
+            <button class="section-button" onClick="location.href='mailto:katebushell@shecodes.com.au';">Get in touch</button>
         </div>
       </div>
       <div class="img">
